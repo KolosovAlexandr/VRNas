@@ -1,9 +1,10 @@
+import style from "./page.module.scss";
 import { Header } from "@/components/modules/Header";
 
 export default function Home() {
   return (
-    <main>
-      <Header></Header>
-    </main>
+    <div className={style.wrapper}>
+      <Header />
+    </div>
   );
 }

@@ -1,17 +1,15 @@
-import style from "./navbar.module.scss";
-import Link from "next/link";
+"use client";
+import { useRef } from "react";
+import { Menu } from "../Menu";
 import { configurationNavbar } from "@/constants/configurationNavbar";
+import style from "./navbar.module.scss";
 
 export const Navbar = () => {
+  const refNav = useRef(null);
+
   return (
-    <nav className={style.nav}>
-      <ul>
-        {configurationNavbar.map((el) => (
-          <li key={el.id}>
-            <Link href={el.href}>{el.title}</Link>
-          </li>
-        ))}
-      </ul>
+    <nav className={style.menu} ref={refNav}>
+      <Menu data={configurationNavbar} refNav={refNav} />
     </nav>
   );
 };

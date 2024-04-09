@@ -1,0 +1,60 @@
+@import "../../../styles/variables.scss";
+
+.menu {
+  &__spoiler {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.submenu {
+  list-style-type: none;
+  width: 12.5rem;
+  position: absolute;
+  top: 1rem;
+  left: -4rem;
+  background-color: $black-light;
+  padding: 0.9rem;
+  border: 0.01rem solid transparent;
+  border-image: linear-gradient(to right, $grey-light, $black-light) 1;
+  margin-top: 0.5rem;
+  transform-origin: 0 0;
+  transition: 0.5s;
+  transform: rotateX(90deg);
+  &_active {
+    transition: 0.5s;
+    transform: rotateX(0deg);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 0.9rem;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $grey-light;
+    &:hover {
+      transition: 0.5s;
+      color: $white;
+    }
+  }
+  &__btn {
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    background: url("../../../../public/assets/icons/Arrow\ down.svg") center
+      center no-repeat;
+    border: none;
+    transition: 0.3s;
+    transform: 0deg;
+    &:hover {
+      stroke: red;
+    }
+    &_active {
+      transition: 0.3s;
+      transform: rotateX(180deg);
+    }
+  }
+}
