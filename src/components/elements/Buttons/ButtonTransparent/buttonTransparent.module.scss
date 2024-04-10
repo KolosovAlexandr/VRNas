@@ -6,7 +6,7 @@
   color: $grey-light;
   padding: 0.75rem 1.5rem;
   border: 1px solid transparent;
-  border-image: linear-gradient(to right, $blue, $purple) 1;
+  border-image: $bg-linear 1;
   background: transparent;
   position: relative;
   z-index: 1;
@@ -17,7 +17,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, $blue, $purple);
+    background-image: $bg-linear;
     transition: opacity 0.3s ease-out;
     z-index: 2;
     opacity: 0;
@@ -29,8 +29,7 @@
     font-size: 1rem;
     z-index: 3;
   }
-}
-
-.buttonTransparent:hover::after {
-  opacity: 1;
+  &:hover::after {
+    opacity: 1;
+  }
 }

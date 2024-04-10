@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Header } from "@/components/modules/Header";
 import "../styles/global.scss";
+import style from "./page.module.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className={style.wrapper}>
+          <Header />
+          <main className={style.page}>{children}</main>
+        </div>
+      </body>
     </html>
   );
 }

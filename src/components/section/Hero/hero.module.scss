@@ -1,0 +1,20 @@
+.hero {
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 75rem;
+    gap: 7.5rem;
+  }
+  &__column {
+    flex: 50%;
+    position: relative;
+  }
+  &__img {
+    position: relative;
+    padding-bottom: 120%;
+  }
+  &__title {
+    font-size: 64px;
+    line-height: 5.25rem;
+  }
+}
