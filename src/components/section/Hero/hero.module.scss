@@ -1,20 +1,82 @@
+@import "../../../styles/variables.scss";
+
 .hero {
+  padding-top: 0.6rem;
   &__container {
     display: flex;
     align-items: center;
-    max-width: 75rem;
     gap: 7.5rem;
+    padding: 0 1rem;
   }
   &__column {
     flex: 50%;
     position: relative;
+  }
+  &__content {
+    margin-bottom: 2.5rem;
   }
   &__img {
     position: relative;
     padding-bottom: 120%;
   }
   &__title {
-    font-size: 64px;
-    line-height: 5.25rem;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+  &__text {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    color: $grey-light;
+    max-width: 28.1rem;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
+
+.clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+  }
+  &__item {
+    margin-right: -0.875rem;
+  }
+  &__text {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 175%;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__underline {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -0.125rem;
+      left: 50%;
+      width: 3rem;
+      height: 0.45rem;
+      background: url("../../../../public/assets/vector/Vector-line.svg");
+      transform: translateX(-50%);
+    }
   }
 }

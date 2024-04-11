@@ -1,7 +1,10 @@
 import { CircleBg } from "@/components/elements/CircleBg";
 import { ButtonGradient } from "@/components/elements/Buttons/ButtonGradient";
-import style from "./hero.module.scss";
+import { clientsList } from "@/constants/configurationClientsList";
+import { Video } from "@/components/elements/Video";
+import poster from "../../../../public/assets/images/poster-1.png";
 import hero from "../../../../public/assets/images/man-1.png";
+import style from "./hero.module.scss";
 
 export const Hero = () => {
   return (
@@ -16,16 +19,23 @@ export const Hero = () => {
               Experience Unforgettable Events in VR. Bring your events to life
               like never before with our VR services
             </p>
-            <ButtonGradient text="discover more" />
+            <ButtonGradient text="discover more" padding="1rem 2.4rem" />
           </div>
           <div className={style.hero__action}>
-            <div>
-              <ul></ul>
-              <div>
-                <span></span>
+            <div className={`${style.hero__clients} ${style.clients}`}>
+              <ul className={style.clients__list}>
+                {clientsList.map((el) => (
+                  <li key={el.id} className={style.clients__item}>
+                    <img src={el.src} alt={el.alt} />
+                  </li>
+                ))}
+              </ul>
+              <div className={style.clients__text}>
+                <span className={style.clients__underline}>32k+</span> Happy
+                Client
               </div>
             </div>
-            <a href=""></a>
+            <Video className={style.hero__play} poster={poster.src} />
           </div>
         </div>
         <div className={style.hero__column}>

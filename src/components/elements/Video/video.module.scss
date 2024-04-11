@@ -1,0 +1,22 @@
+.play {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.75rem;
+    height: 1.75rem;
+    background: url("../../../../public/assets/icons/Play\ button.svg");
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s;
+  }
+  &:hover::before {
+    transform: translate(-50%, -50%) scale(1.5);
+    transition: 0.5s;
+  }
+}
+
+.video {
+  cursor: pointer;
+}

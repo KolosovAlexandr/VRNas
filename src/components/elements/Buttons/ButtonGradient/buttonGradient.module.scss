@@ -4,10 +4,11 @@
   .buttonGradient {
     border: none;
     background-image: $bg-linear;
-    padding: 0.7rem 1.6rem;
     color: $white;
+    font-size: 1rem;
     text-transform: uppercase;
     font-family: "ChakraPetch";
     font-weight: 600;
+    letter-spacing: 0.1rem;
   }
 }
