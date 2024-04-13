@@ -1,6 +1,6 @@
-import { INavbar } from "@/types/INavbar"
+import { IConfigNavbar } from "@/types/IConfigNavbar"
 
-export const configurationNavbar: INavbar[] = [
+export const configNavbar: IConfigNavbar[] = [
     {id: 1, title: 'Home', href: '/'},
     {id: 2, title: 'About us', href: '/about_us'},
     {id: 3, title: 'Service', href: '/service'},

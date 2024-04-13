@@ -30,8 +30,8 @@ export const Video = ({
       <video
         className={style.video}
         src="https://videocdn.cdnpk.net/joy/content/video/free/video0455/large_preview/_import_6074c96c5a2305.01102993.mp4"
-        height={200}
-        width={200}
+        height={127}
+        width={196}
         onEnded={() => setIsPlay(false)}
         poster={poster}
       ></video>

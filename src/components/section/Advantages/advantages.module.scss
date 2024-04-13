@@ -1,0 +1,19 @@
+@import "../../../styles/variables.scss";
+
+.advantages {
+  position: relative;
+  margin-bottom: 7.5rem;
+  &__container {
+    padding: 0 0.94rem;
+  }
+  &__body {
+    padding: 3.44rem 2.45rem 0 2.45rem;
+    border: 0.01rem solid transparent;
+    border-image: linear-gradient(to right, $grey-light, $black-light) 1;
+    background: $black-light;
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

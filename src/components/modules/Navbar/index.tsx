@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
 import { Menu } from "../Menu";
-import { configurationNavbar } from "@/constants/configurationNavbar";
+import { configNavbar } from "@/constants/configurationNavbar";
 import style from "./navbar.module.scss";
 
 export const Navbar = () => {
@@ -9,7 +9,7 @@ export const Navbar = () => {
 
   return (
     <nav className={style.menu} ref={refNav}>
-      <Menu data={configurationNavbar} refNav={refNav} />
+      <Menu data={configNavbar} refNav={refNav} />
     </nav>
   );
 };

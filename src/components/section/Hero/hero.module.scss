@@ -1,23 +1,34 @@
 @import "../../../styles/variables.scss";
 
 .hero {
-  padding-top: 0.6rem;
+  padding-top: 0.625rem;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -29%;
+    bottom: -40%;
+    width: 68.75rem;
+    height: 45rem;
+    background: url("../../../../public/assets/vector/HeroBg.svg") center
+      no-repeat;
+  }
+
   &__container {
     display: flex;
     align-items: center;
     gap: 7.5rem;
-    padding: 0 1rem;
+    padding: 0 0.94rem;
   }
   &__column {
     flex: 50%;
-    position: relative;
   }
   &__content {
     margin-bottom: 2.5rem;
   }
   &__img {
     position: relative;
-    padding-bottom: 120%;
+    padding-bottom: 118.5%;
   }
   &__title {
     font-size: 4rem;

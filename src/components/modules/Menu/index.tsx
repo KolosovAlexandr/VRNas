@@ -1,12 +1,12 @@
 import { MenuItems } from "../MenuItems";
-import { INavbar } from "@/types/INavbar";
+import { IConfigNavbar } from "@/types/IConfigNavbar";
 import style from "./menu.module.scss";
 
 export const Menu = ({
   data,
   refNav,
 }: {
-  data: INavbar[];
+  data: IConfigNavbar[];
   refNav: React.RefObject<HTMLSelectElement>;
 }) => {
   return (

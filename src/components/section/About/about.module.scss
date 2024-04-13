@@ -1,0 +1,66 @@
+@import "../../../styles/variables.scss";
+
+.about {
+  position: relative;
+  margin-bottom: 7.5rem;
+  &__container {
+    display: flex;
+    align-items: flex-end;
+    gap: 4rem;
+    padding: 0 0.94rem;
+  }
+
+  &__column {
+    flex: 50%;
+  }
+
+  &__media {
+    position: relative;
+  }
+  &__image {
+    position: relative;
+    padding-bottom: 115%;
+    img {
+      padding-left: 1.45rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $black-light;
+      width: 73%;
+      height: 80%;
+      z-index: -2;
+    }
+  }
+  &__text {
+    margin-bottom: 1.5rem;
+    line-height: 200%;
+    color: $grey;
+  }
+  &__play {
+    position: absolute;
+    bottom: -5%;
+    right: 0;
+  }
+
+  &__list {
+    margin-bottom: 2rem;
+    list-style-type: none;
+  }
+
+  &__item {
+    font-size: 1rem;
+    line-height: 1.75;
+    &:not(:last-child) {
+      margin-bottom: 0.875rem;
+    }
+  }
+}
+
+.list__item {
+  padding-left: 1.75rem;
+  background: url("../../../../public/assets/icons/check-box.svg") left center /
+    16px 16px no-repeat;
+}

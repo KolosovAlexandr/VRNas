@@ -1,4 +1,4 @@
-import { INavbar } from "@/types/INavbar";
+import { INavbar } from "@/types/IConfigNavbar";
 import Link from "next/link";
 import style from "./subMenu.module.scss";
 

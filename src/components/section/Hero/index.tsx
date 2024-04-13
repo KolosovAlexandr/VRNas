@@ -1,6 +1,6 @@
 import { CircleBg } from "@/components/elements/CircleBg";
 import { ButtonGradient } from "@/components/elements/Buttons/ButtonGradient";
-import { clientsList } from "@/constants/configurationClientsList";
+import { configHero } from "@/constants/configurationHero";
 import { Video } from "@/components/elements/Video";
 import poster from "../../../../public/assets/images/poster-1.png";
 import hero from "../../../../public/assets/images/man-1.png";
@@ -24,7 +24,7 @@ export const Hero = () => {
           <div className={style.hero__action}>
             <div className={`${style.hero__clients} ${style.clients}`}>
               <ul className={style.clients__list}>
-                {clientsList.map((el) => (
+                {configHero.map((el) => (
                   <li key={el.id} className={style.clients__item}>
                     <img src={el.src} alt={el.alt} />
                   </li>

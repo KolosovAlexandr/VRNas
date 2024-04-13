@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { INavbar } from "@/types/INavbar";
+import { IConfigNavbar } from "@/types/IConfigNavbar";
 import { SubMenu } from "../SubMenu";
 import style from "./menuItems.module.scss";
 import { useState } from "react";
@@ -11,7 +11,7 @@ export const MenuItems = ({
   item,
   refNav,
 }: {
-  item: INavbar;
+  item: IConfigNavbar;
   refNav: React.RefObject<HTMLSelectElement>;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
