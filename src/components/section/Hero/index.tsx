@@ -2,6 +2,7 @@ import { CircleBg } from "@/components/elements/CircleBg";
 import { ButtonGradient } from "@/components/elements/Buttons/ButtonGradient";
 import { configHero } from "@/constants/configurationHero";
 import { Video } from "@/components/elements/Video";
+import { configVideo } from "@/constants/configurationVideo";
 import poster from "../../../../public/assets/images/poster-1.png";
 import hero from "../../../../public/assets/images/man-1.png";
 import style from "./hero.module.scss";
@@ -35,7 +36,11 @@ export const Hero = () => {
                 Client
               </div>
             </div>
-            <Video className={style.hero__play} poster={poster.src} />
+            <Video
+              className={style.hero__play}
+              poster={poster.src}
+              video={configVideo[0].src}
+            />
           </div>
         </div>
         <div className={style.hero__column}>
