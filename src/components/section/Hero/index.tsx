@@ -1,4 +1,4 @@
-import { CircleBg } from "@/components/elements/CircleBg";
+import { SectionImage } from "@/components/elements/SectionImage";
 import { ButtonGradient } from "@/components/elements/Buttons/ButtonGradient";
 import { configHero } from "@/constants/configurationHero";
 import { Video } from "@/components/elements/Video";
@@ -36,15 +36,11 @@ export const Hero = () => {
                 Client
               </div>
             </div>
-            <Video
-              className={style.hero__play}
-              poster={poster.src}
-              video={configVideo[0].src}
-            />
+            <Video poster={poster.src} video={configVideo[0].src} />
           </div>
         </div>
         <div className={style.hero__column}>
-          <CircleBg img={hero.src} className={style.hero__img} />
+          <SectionImage img={hero.src} className={style.hero__image} />
         </div>
       </div>
     </section>

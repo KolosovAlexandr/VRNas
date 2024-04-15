@@ -13,16 +13,4 @@
     width: 100%;
     height: 100%;
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 100%;
-    height: 40%;
-    background: $bg-linear;
-    filter: blur(100px);
-    transform: translate(-55%, -60%) rotate(-40deg);
-  }
 }

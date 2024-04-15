@@ -1,4 +1,4 @@
-import { INavbar } from "@/types/IConfigNavbar";
+import { IConfigNavbar } from "@/types/IConfigNavbar";
 import Link from "next/link";
 import style from "./subMenu.module.scss";
 
@@ -7,7 +7,7 @@ export const SubMenu = ({
   isOpen,
   onClick,
 }: {
-  data: INavbar[];
+  data: IConfigNavbar[];
   isOpen: boolean;
   onClick: () => void;
 }) => {

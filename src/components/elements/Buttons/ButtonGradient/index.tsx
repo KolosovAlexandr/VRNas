@@ -8,10 +8,8 @@ export const ButtonGradient = ({
   padding: string;
 }) => {
   return (
-    <div className={style.container}>
-      <button className={style.buttonGradient} style={{ padding: padding }}>
-        {text}
-      </button>
-    </div>
+    <button className={style.buttonGradient} style={{ padding: padding }}>
+      {text}
+    </button>
   );
 };

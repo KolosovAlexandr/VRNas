@@ -14,6 +14,7 @@ export const OurService = () => {
               classNameH3={style.service__subtitle}
               textH2="Our Service"
               textH3="Our Service"
+              marginBottom="0"
             />
           </div>
           <div className={style.service__column}>

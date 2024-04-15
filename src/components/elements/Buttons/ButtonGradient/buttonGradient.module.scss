@@ -1,14 +1,30 @@
 @import "../../../../styles/variables.scss";
 
-.container {
-  .buttonGradient {
-    border: none;
-    background-image: $bg-linear;
-    color: $white;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-family: "ChakraPetch";
-    font-weight: 600;
-    letter-spacing: 0.1rem;
+.buttonGradient {
+  position: relative;
+  border: none;
+  background-image: $bg-linear;
+  color: $white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: "ChakraPetch";
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $bg-linear;
+    filter: blur(20px);
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+  }
+  &:hover::before {
+    opacity: 1;
   }
 }

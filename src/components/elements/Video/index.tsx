@@ -5,7 +5,7 @@ export const Video = ({
   poster,
   video,
 }: {
-  className: string;
+  className?: string;
   poster: string;
   video: string;
 }) => {

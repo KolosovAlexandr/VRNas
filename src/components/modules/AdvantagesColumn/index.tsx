@@ -1,7 +1,12 @@
-import { IAdvantages } from "@/types/IConfigAdvantages";
+import { IConfigAdvantages } from "@/types/IConfigAdvantages";
 import style from "./advantagesColumn.module.scss";
 
-export const AdvantagesColumn = ({ src, alt, title, text }: IAdvantages) => {
+export const AdvantagesColumn = ({
+  src,
+  alt,
+  title,
+  text,
+}: IConfigAdvantages) => {
   return (
     <div className={style.advantages__column}>
       <div className={style.advantages__image}>

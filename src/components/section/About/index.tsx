@@ -1,4 +1,4 @@
-import { CircleBg } from "@/components/elements/CircleBg";
+import { SectionImage } from "@/components/elements/SectionImage";
 import { Video } from "@/components/elements/Video";
 import { Title } from "@/components/elements/Title/Index";
 import { ButtonGradient } from "@/components/elements/Buttons/ButtonGradient";
@@ -14,11 +14,11 @@ export const About = () => {
       <div className={style.about__container}>
         <div className={style.about__column}>
           <div className={style.about__media}>
-            <CircleBg img={img.src} className={style.about__image} />
+            <SectionImage img={img.src} className={style.about__image} />
             <Video
               poster={poster.src}
-              className={style.about__play}
               video={configVideo[1].src}
+              className={style.about__action}
             />
           </div>
         </div>
@@ -29,6 +29,7 @@ export const About = () => {
               classNameH3={style.about__subtitle}
               textH2="about us"
               textH3="Bring your events to life like never before with our VR services."
+              marginBottom="0.75rem"
             />
             <p className={style.about__text}>
               VRNas is a leading provider of VR services for education,
