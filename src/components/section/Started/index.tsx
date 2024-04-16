@@ -20,7 +20,7 @@ export const Started = () => {
         <div className={style.started__video}>
           <video
             src={configVideo[3].src}
-            width={1170}
+            height={509}
             poster={poster.src}
             controls={true}
           ></video>

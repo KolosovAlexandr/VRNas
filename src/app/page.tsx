@@ -5,6 +5,7 @@ import { OurService } from "@/components/section/OurService";
 import { Choose } from "@/components/section/Choose";
 import { Started } from "@/components/section/Started";
 import { Testimonial } from "@/components/section/Testimonial";
+import { Pricing } from "@/components/section/Pricing";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Choose />
       <Started />
       <Testimonial />
+      <Pricing />
     </>
   );
 }

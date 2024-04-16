@@ -18,7 +18,9 @@
   }
   &__image {
     position: relative;
-    padding-bottom: 115%;
+    & img {
+      padding-left: 1.45rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -29,6 +31,7 @@
       background: $bg-linear;
       filter: blur(100px);
       transform: translate(-55%, -60%) rotate(-40deg);
+      z-index: -1;
     }
     &::after {
       content: "";
@@ -39,9 +42,6 @@
       width: 73%;
       height: 80%;
       z-index: -2;
-    }
-    img {
-      padding-left: 1.45rem;
     }
   }
   &__action {

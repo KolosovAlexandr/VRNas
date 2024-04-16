@@ -1,0 +1,20 @@
+@import "../../../styles/variables.scss";
+
+.item {
+  display: flex;
+  gap: 1rem;
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  &__title {
+    font-size: 1.125rem;
+    line-height: 1.27;
+    margin-bottom: 0.75rem;
+  }
+  &__text {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 175%;
+    color: $grey-light;
+  }
+}

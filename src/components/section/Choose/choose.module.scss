@@ -27,7 +27,9 @@
   }
   &__image {
     position: relative;
-    padding-bottom: 118%;
+    & img {
+      max-height: 39.31rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -38,12 +40,13 @@
       background: $bg-linear;
       filter: blur(100px);
       transform: translate(-55%, -60%) rotate(-40deg);
+      z-index: -1;
     }
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
-      left: 7%;
+      left: 8%;
       background: $black-light;
       width: 73%;
       height: 76%;

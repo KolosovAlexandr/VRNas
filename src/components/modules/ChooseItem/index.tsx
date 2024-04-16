@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { IConfigChoose } from "@/types/IConfigChoose";
 import arrow from "../../../../public/assets/icons/Arrow down.svg";
-import style from "./chooseSpoiler.module.scss";
+import style from "./chooseItem.module.scss";
 
-export const ChooseSpoiler = ({ className, title, text }: IConfigChoose) => {
+export const ChooseItem = ({ className, title, text }: IConfigChoose) => {
   const [hidden, setHidden] = useState(false);
   return (
     <div

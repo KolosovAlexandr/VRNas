@@ -29,7 +29,9 @@
   }
   &__image {
     position: relative;
-    padding-bottom: 118.5%;
+    & img {
+      max-height: 38.875rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -40,6 +42,7 @@
       background: $bg-linear;
       filter: blur(100px);
       transform: translate(-55%, -60%) rotate(-40deg);
+      z-index: -1;
     }
   }
   &__title {

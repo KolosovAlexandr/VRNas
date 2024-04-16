@@ -1,5 +1,3 @@
-"use client";
-import { useState } from "react";
 import { IConfigTestimonial } from "@/types/IConfigTestimonial";
 import style from "./testimonialClient.module.scss";
 
@@ -8,22 +6,26 @@ export const TestimonialClient = ({
   text,
   name,
   job,
+  id,
+  active,
+  toggleClick,
 }: IConfigTestimonial) => {
-  const [active, setActive] = useState(false);
-  const toggleClick = () => {
-    setActive(!active);
-  };
   return (
     <div className={style.client}>
       <button
-        onClick={toggleClick}
+        id={id}
+        onClick={() => toggleClick(id)}
         className={
           active ? `${style.client__btn} ${style.active}` : style.client__btn
         }
       >
         <img src={clientImg} alt="" />
       </button>
-      <div className={style.client__body}>
+      <div
+        className={
+          active ? `${style.client__body} ${style.active}` : style.client__body
+        }
+      >
         <div className={style.client__text}>{text}</div>
         <div className={style.client__name}>
           <span>{name}</span> - {job}

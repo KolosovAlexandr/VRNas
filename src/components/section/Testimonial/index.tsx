@@ -1,9 +1,20 @@
+"use client";
+import { useState } from "react";
 import { Title } from "@/components/elements/Title/Index";
 import { TestimonialClient } from "@/components/modules/TestimonialClient";
 import { configTestimonial } from "@/constants/configurationTestimonial";
 import image from "../../../../public/assets/images/man-4.png";
 import style from "./testimonial.module.scss";
+
 export const Testimonial = () => {
+  const [list, setList] = useState(configTestimonial);
+  const toggleActiveClick = (id: string) => {
+    setList(
+      list.map((el) =>
+        el.id === id ? { ...el, active: !el.active } : { ...el, active: false }
+      )
+    );
+  };
   return (
     <section className={style.testimonial}>
       <div className={style.testimonial__container}>
@@ -23,13 +34,16 @@ export const Testimonial = () => {
             alt="image"
           />
           <div className={style.clients}>
-            {configTestimonial.map((el) => (
+            {list.map((el) => (
               <TestimonialClient
                 key={el.name}
                 clientImg={el.clientImg}
                 name={el.name}
                 text={el.text}
                 job={el.job}
+                id={el.id}
+                active={el.active}
+                toggleClick={toggleActiveClick}
               />
             ))}
           </div>

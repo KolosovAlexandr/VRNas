@@ -1,10 +1,9 @@
-import { SectionImage } from "@/components/elements/SectionImage";
 import { ButtonGradient } from "@/components/elements/Buttons/ButtonGradient";
 import { configHero } from "@/constants/configurationHero";
 import { Video } from "@/components/elements/Video";
 import { configVideo } from "@/constants/configurationVideo";
 import poster from "../../../../public/assets/images/poster-1.png";
-import hero from "../../../../public/assets/images/man-1.png";
+import image from "../../../../public/assets/images/man-1.png";
 import style from "./hero.module.scss";
 
 export const Hero = () => {
@@ -40,7 +39,9 @@ export const Hero = () => {
           </div>
         </div>
         <div className={style.hero__column}>
-          <SectionImage img={hero.src} className={style.hero__image} />
+          <div className={style.hero__image}>
+            <img src={image.src} alt="image" />
+          </div>
         </div>
       </div>
     </section>

@@ -45,12 +45,34 @@
     }
   }
   &__body {
+    background: url("../../../../public/assets/vector/TextBg.svg") no-repeat
+      center center;
+    font-size: 0.75rem;
+    line-height: 1.66;
+    color: $grey;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 15px);
+    width: 18.75rem;
+    padding: 1.125rem;
+    padding-left: 1.44rem;
+    transform-origin: 0 0;
+    transform: rotateX(90deg) translateY(-50%);
+    transition: all 0.5s ease 0s;
+    &.active {
+      transform: rotateX(0deg) translateY(-50%);
+    }
   }
   &__text {
-    display: none;
+    margin-bottom: 0.5rem;
   }
   &__name {
-    display: none;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    border-image: $bg-linear 1;
+    span {
+      color: $white;
+    }
   }
 }
 

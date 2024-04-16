@@ -1,10 +1,9 @@
-import { SectionImage } from "@/components/elements/SectionImage";
 import { Title } from "@/components/elements/Title/Index";
-import { ChooseSpoiler } from "@/components/modules/ChooseSpoiler";
+import { ChooseItem } from "@/components/modules/ChooseItem";
 import { Video } from "@/components/elements/Video";
 import { configChoose } from "@/constants/configurationChoose";
 import { configVideo } from "@/constants/configurationVideo";
-import img from "../../../../public/assets/images/man-3.png";
+import image from "../../../../public/assets/images/man-3.png";
 import poster from "../../../../public/assets/images/poster-3.png";
 
 import style from "./choose.module.scss";
@@ -24,7 +23,7 @@ export const Choose = () => {
             />
             <div className={style.choose__spoilers}>
               {configChoose.map((el) => (
-                <ChooseSpoiler
+                <ChooseItem
                   key={el.id}
                   text={el.text}
                   title={el.title}
@@ -36,7 +35,9 @@ export const Choose = () => {
         </div>
         <div className={style.choose__column}>
           <div className={style.choose__media}>
-            <SectionImage img={img.src} className={style.choose__image} />
+            <div className={style.choose__image}>
+              <img src={image.src} alt="image" />
+            </div>
             <Video
               video={configVideo[2].src}
               className={style.choose__action}

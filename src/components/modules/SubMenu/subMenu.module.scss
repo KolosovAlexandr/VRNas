@@ -49,9 +49,6 @@
     border: none;
     transition: 0.3s;
     transform: 0deg;
-    &:hover {
-      stroke: red;
-    }
     &_active {
       transition: 0.3s;
       transform: rotateX(180deg);

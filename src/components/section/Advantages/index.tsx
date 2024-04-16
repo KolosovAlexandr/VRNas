@@ -1,5 +1,5 @@
 import style from "./advantages.module.scss";
-import { AdvantagesColumn } from "@/components/modules/AdvantagesColumn";
+import { AdvantagesItem } from "@/components/modules/AdvantagesColumn";
 import { configAdvantages } from "@/constants/configurationAdvantages";
 
 export const Advantages = () => {
@@ -9,7 +9,7 @@ export const Advantages = () => {
         <div className={style.advantages__body}>
           <div className={style.advantages__content}>
             {configAdvantages.map((el) => (
-              <AdvantagesColumn
+              <AdvantagesItem
                 key={el.title}
                 text={el.text}
                 src={el.src}

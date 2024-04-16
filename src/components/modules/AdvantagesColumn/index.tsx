@@ -1,7 +1,7 @@
 import { IConfigAdvantages } from "@/types/IConfigAdvantages";
-import style from "./advantagesColumn.module.scss";
+import style from "./advantagesItem.module.scss";
 
-export const AdvantagesColumn = ({
+export const AdvantagesItem = ({
   src,
   alt,
   title,

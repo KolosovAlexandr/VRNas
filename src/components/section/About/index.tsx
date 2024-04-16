@@ -1,10 +1,9 @@
-import { SectionImage } from "@/components/elements/SectionImage";
 import { Video } from "@/components/elements/Video";
 import { Title } from "@/components/elements/Title/Index";
 import { ButtonGradient } from "@/components/elements/Buttons/ButtonGradient";
 import { configAbout } from "@/constants/configurationAbout";
 import { configVideo } from "@/constants/configurationVideo";
-import img from "../../../../public/assets/images/man-2.png";
+import image from "../../../../public/assets/images/man-2.png";
 import poster from "../../../../public/assets/images/poster-2.jpg";
 import style from "./about.module.scss";
 
@@ -14,7 +13,9 @@ export const About = () => {
       <div className={style.about__container}>
         <div className={style.about__column}>
           <div className={style.about__media}>
-            <SectionImage img={img.src} className={style.about__image} />
+            <div className={style.about__image}>
+              <img src={image.src} alt="image" />
+            </div>
             <Video
               poster={poster.src}
               video={configVideo[1].src}
