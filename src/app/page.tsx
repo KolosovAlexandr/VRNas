@@ -6,6 +6,8 @@ import { Choose } from "@/components/section/Choose";
 import { Started } from "@/components/section/Started";
 import { Testimonial } from "@/components/section/Testimonial";
 import { Pricing } from "@/components/section/Pricing";
+import { Partners } from "@/components/section/Partners";
+import { Articles } from "@/components/section/Articles";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <Started />
       <Testimonial />
       <Pricing />
+      <Partners />
+      <Articles />
     </>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Title } from "@/components/elements/Title/Index";
-import { TestimonialClient } from "@/components/modules/TestimonialClient";
+import { TestimonialItem } from "@/components/modules/TestimonialItem";
 import { configTestimonial } from "@/constants/configurationTestimonial";
 import image from "../../../../public/assets/images/man-4.png";
 import style from "./testimonial.module.scss";
@@ -35,7 +35,7 @@ export const Testimonial = () => {
           />
           <div className={style.clients}>
             {list.map((el) => (
-              <TestimonialClient
+              <TestimonialItem
                 key={el.name}
                 clientImg={el.clientImg}
                 name={el.name}

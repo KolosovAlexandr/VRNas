@@ -1,6 +1,7 @@
-@import "../../../../styles/variables.scss";
+@import "../../../styles/variables.scss";
 
-.buttonTransparent {
+.linkTransparent {
+  display: inline-block;
   cursor: pointer;
   font-size: 1rem;
   color: $grey-light;
@@ -9,6 +10,7 @@
   border-image: $bg-linear 1;
   background: transparent;
   position: relative;
+  text-decoration: none;
   z-index: 1;
   &::after {
     position: absolute;
@@ -27,6 +29,10 @@
     font-family: "ChakraPetch";
     font-weight: 300;
     font-size: 1rem;
+    z-index: 3;
+  }
+  &__image {
+    position: relative;
     z-index: 3;
   }
   &:hover::after {

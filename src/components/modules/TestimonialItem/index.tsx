@@ -1,7 +1,7 @@
 import { IConfigTestimonial } from "@/types/IConfigTestimonial";
-import style from "./testimonialClient.module.scss";
+import style from "./testimonialItem.module.scss";
 
-export const TestimonialClient = ({
+export const TestimonialItem = ({
   clientImg,
   text,
   name,

@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { Logo } from "@/components/elements/Logo";
 import { Navbar } from "../Navbar";
-import { ButtonTransparent } from "@/components/elements/Buttons/ButtonTransparent";
 import style from "./header.module.scss";
 
 export const Header = () => {
@@ -29,7 +28,7 @@ export const Header = () => {
           </div>
         </div>
         <div className={style.header__column}>
-          <ButtonTransparent text="Contact us" />
+          <p>contact us</p>
         </div>
       </div>
     </header>

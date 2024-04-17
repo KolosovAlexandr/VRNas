@@ -1,6 +1,6 @@
 import { Video } from "@/components/elements/Video";
 import { Title } from "@/components/elements/Title/Index";
-import { ButtonGradient } from "@/components/elements/Buttons/ButtonGradient";
+import { LinkGradient } from "@/components/elements/LinkGradient";
 import { configAbout } from "@/constants/configurationAbout";
 import { configVideo } from "@/constants/configurationVideo";
 import image from "../../../../public/assets/images/man-2.png";
@@ -49,7 +49,11 @@ export const About = () => {
                 </li>
               ))}
             </ul>
-            <ButtonGradient text="read more" padding="1rem 2.4rem" />
+            <LinkGradient
+              text="read more"
+              className={style.about__btn}
+              href="#"
+            />
           </div>
         </div>
       </div>

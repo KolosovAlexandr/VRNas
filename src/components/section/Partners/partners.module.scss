@@ -1,0 +1,16 @@
+.partners {
+  margin-bottom: 7.5rem;
+  &__container {
+    text-align: center;
+    margin-bottom: 3.625rem;
+  }
+  &__body {
+  }
+  &__content {
+    position: relative;
+  }
+  &__image {
+    display: flex;
+    justify-content: center;
+  }
+}

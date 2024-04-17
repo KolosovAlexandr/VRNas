@@ -1,7 +1,7 @@
 import { Title } from "@/components/elements/Title/Index";
 import { PricingItem } from "@/components/modules/PricingItem";
 import { configPricing } from "@/constants/configurationPricing";
-import { ButtonGradient } from "@/components/elements/Buttons/ButtonGradient";
+import { LinkGradient } from "@/components/elements/LinkGradient";
 import image from "../../../../public/assets/images/man-5.png";
 import style from "./pricing.module.scss";
 
@@ -40,7 +40,7 @@ export const Pricing = () => {
             <div className={style.price__top}>Start from</div>
             <div className={style.price__value}>$99</div>
             <div className={style.price__btn}>
-              <ButtonGradient text="get started" padding="1rem 2.4rem" />
+              <LinkGradient text="get started" href="#" />
             </div>
 
             <div className={style.price__description}>

@@ -1,5 +1,5 @@
 import { Title } from "@/components/elements/Title/Index";
-import { ButtonGradient } from "@/components/elements/Buttons/ButtonGradient";
+import { LinkGradient } from "@/components/elements/LinkGradient";
 import { configVideo } from "@/constants/configurationVideo";
 import poster from "../../../../public/assets/images/poster-4.png";
 
@@ -26,7 +26,7 @@ export const Started = () => {
           ></video>
         </div>
         <div className={style.started__button}>
-          <ButtonGradient text="get started" padding="1rem 2.4rem" />
+          <LinkGradient text="get started" href="#" />
         </div>
       </div>
     </section>

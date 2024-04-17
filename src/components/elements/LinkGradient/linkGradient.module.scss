@@ -1,6 +1,7 @@
-@import "../../../../styles/variables.scss";
+@import "../../../styles/variables.scss";
 
-.buttonGradient {
+.linkGradient {
+  display: inline-block;
   position: relative;
   border: none;
   background-image: $bg-linear;
@@ -10,6 +11,7 @@
   font-family: "ChakraPetch";
   font-weight: 600;
   letter-spacing: 0.1rem;
+  text-decoration: none;
   cursor: pointer;
   &::before {
     content: "";

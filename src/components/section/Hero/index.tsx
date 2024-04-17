@@ -1,4 +1,4 @@
-import { ButtonGradient } from "@/components/elements/Buttons/ButtonGradient";
+import { LinkGradient } from "@/components/elements/LinkGradient";
 import { configHero } from "@/constants/configurationHero";
 import { Video } from "@/components/elements/Video";
 import { configVideo } from "@/constants/configurationVideo";
@@ -19,7 +19,11 @@ export const Hero = () => {
               Experience Unforgettable Events in VR. Bring your events to life
               like never before with our VR services
             </p>
-            <ButtonGradient text="discover more" padding="1rem 2.4rem" />
+            <LinkGradient
+              className={style.hero__btn}
+              text="discover more"
+              href="#"
+            />
           </div>
           <div className={style.hero__action}>
             <div className={`${style.hero__clients} ${style.clients}`}>

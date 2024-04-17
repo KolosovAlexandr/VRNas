@@ -100,7 +100,12 @@
     margin-bottom: 0.875rem;
   }
   &__btn {
+    position: relative;
     margin-bottom: 0.875rem;
+    z-index: 1;
+    a {
+      padding: 1.15rem 2.4rem;
+    }
   }
   &__description {
     color: $grey-light;
