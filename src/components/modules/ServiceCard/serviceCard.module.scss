@@ -9,7 +9,7 @@
     padding: 2.375rem 2rem 1.5rem;
     background: $black-light;
     border: 0.01rem solid transparent;
-    border-image: linear-gradient(to right, $grey-light, $black-light) 1;
+    border-image: $border;
     position: relative;
     cursor: pointer;
     height: 100%;

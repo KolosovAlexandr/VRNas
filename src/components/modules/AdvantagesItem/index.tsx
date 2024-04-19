@@ -7,13 +7,15 @@ export const AdvantagesItem = ({
   title,
   text,
 }: IConfigAdvantages) => {
+  console.log(src);
+  console.log(alt);
   return (
-    <div className={style.advantages__column}>
-      <div className={style.advantages__image}>
+    <div className={style.column}>
+      <div className={style.column__image}>
         <img src={src} alt={alt} />
       </div>
-      <h2 className={style.advantages__title}>{title}</h2>
-      <p className={style.advantages__text}>{text}</p>
+      <h2 className={style.column__title}>{title}</h2>
+      <p className={style.column__text}>{text}</p>
     </div>
   );
 };

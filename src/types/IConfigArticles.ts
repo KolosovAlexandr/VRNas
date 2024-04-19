@@ -2,6 +2,6 @@ export type IConfigArticles = {
     id: string
     tag: string
     text: string
-    image: string
+    src: string
     alt: string
 }

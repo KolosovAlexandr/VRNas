@@ -5,11 +5,13 @@
   margin-bottom: 7.5rem;
   &__container {
     padding: 0 0.94rem;
+    max-width: 75rem;
+    margin: 0 auto;
   }
   &__body {
     padding: 3.44rem 2.45rem 0 2.45rem;
     border: 0.01rem solid transparent;
-    border-image: linear-gradient(to right, $grey-light, $black-light) 1;
+    border-image: $border;
     background: $black-light;
   }
   &__content {

@@ -2,6 +2,7 @@ import { Title } from "@/components/elements/Title/Index";
 import { configArticles } from "@/constants/configurationArticles";
 import { ArticlesItem } from "@/components/modules/ArticlesItem";
 import { LinkTransparent } from "@/components/elements/LinkTransparent";
+import { Slider } from "@/components/modules/Slider";
 import style from "./articles.module.scss";
 
 export const Articles = () => {
@@ -29,10 +30,10 @@ export const Articles = () => {
         <div className={style.articles__body}>
           <div className={style.articles__column}>
             <h4 className={style.articles__title}>Popular Article</h4>
-            <div className={style.articles__slider}></div>
+            <Slider />
           </div>
           <div className={style.articles__column}>
-            <div className={style.overflow}>
+            <div className={style.articles__overflow}>
               <h4 className={style.articles__title}>Recent Article</h4>
               <div className={style.articles__recent}>
                 <ul className={style.articles__list}>
@@ -41,7 +42,7 @@ export const Articles = () => {
                       <ArticlesItem
                         id={el.id}
                         text={el.text}
-                        image={el.image}
+                        src={el.src}
                         tag={el.tag}
                         alt={el.alt}
                       />

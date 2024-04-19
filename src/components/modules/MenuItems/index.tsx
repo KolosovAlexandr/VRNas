@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { IConfigNavbar } from "@/types/IConfigNavbar";
 import { SubMenu } from "../SubMenu";
-import style from "./menuItems.module.scss";
 import { useState } from "react";
 import { useClickOutside } from "@/hooks/useClickOutSide";
+import style from "./menuItems.module.scss";
 
 export const MenuItems = ({
   item,
@@ -21,6 +21,16 @@ export const MenuItems = ({
   const toggleIsOpen = () => {
     setIsOpen(!isOpen);
   };
+  const toggleIsOpenWithEvent = (
+    e: React.BaseSyntheticEvent<
+      MouseEvent,
+      EventTarget & HTMLAnchorElement,
+      EventTarget
+    >
+  ) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
 
   return (
     <li className={style.menu__item}>
@@ -29,7 +39,7 @@ export const MenuItems = ({
           <Link
             href={item.href}
             className={style.menu__link}
-            onClick={toggleIsOpen}
+            onClick={toggleIsOpenWithEvent}
           >
             {item.title}
           </Link>

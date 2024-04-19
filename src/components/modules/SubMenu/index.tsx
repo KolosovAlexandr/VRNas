@@ -18,7 +18,7 @@ export const SubMenu = ({
           isOpen ? `${style.submenu} ${style.submenu_active}` : style.submenu
         }
       >
-        {data.map((item) => (
+        {data.map((item, i) => (
           <li className={style.submenu__item} key={item.id}>
             <Link href={item.href} className={style.submenu__link}>
               {item.title}

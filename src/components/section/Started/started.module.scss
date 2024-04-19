@@ -5,6 +5,8 @@
   &__container {
     position: relative;
     padding: 0 0.94rem;
+    max-width: 75rem;
+    margin: 0 auto;
     &::before {
       content: "";
       position: absolute;

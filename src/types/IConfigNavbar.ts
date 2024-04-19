@@ -1,5 +1,5 @@
 export type IConfigNavbar = {
-    id: number,
+    id: string,
     title: string,
     href: string,
     children?: IConfigNavbar[]

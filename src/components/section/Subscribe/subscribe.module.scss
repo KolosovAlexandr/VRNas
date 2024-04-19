@@ -1,0 +1,66 @@
+@import "../../../styles/variables.scss";
+
+.subscribe {
+  margin-bottom: 7.5rem;
+  &__container {
+    padding: 0 0.94rem;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    background: $bg-linear;
+    border-radius: 4px;
+    padding: 2.5rem 4.375rem 1.875rem;
+  }
+  &__column {
+    flex: 50%;
+    &:first-child {
+      flex-shrink: 0;
+    }
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  &__title {
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+}
+
+.form {
+  display: flex;
+  background: $input;
+  padding: 0 0 0 1rem;
+  &__image {
+    max-width: 25px;
+  }
+  &__input {
+    border: none;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    color: $white;
+    padding: 0.875rem 5.75rem 0.875rem 0.875rem;
+    &::placeholder {
+      color: $white;
+      text-align: start;
+      transition: all 0.3s ease 0s;
+      opacity: 1;
+    }
+    &:hover::placeholder {
+      opacity: 0.5;
+    }
+  }
+  &__btn {
+    cursor: pointer;
+    padding: 0.92rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}

@@ -20,6 +20,8 @@
     align-items: center;
     gap: 7.5rem;
     padding: 0 0.94rem;
+    max-width: 75rem;
+    margin: 0 auto;
   }
   &__column {
     flex: 50%;

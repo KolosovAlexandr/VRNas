@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/modules/Header";
+import { Footer } from "@/components/modules/Footer";
 import "../styles/global.scss";
 import style from "./page.module.scss";
 
@@ -19,6 +20,7 @@ export default function RootLayout({
         <div className={style.wrapper}>
           <Header />
           <main className={style.page}>{children}</main>
+          <Footer />
         </div>
       </body>
     </html>
