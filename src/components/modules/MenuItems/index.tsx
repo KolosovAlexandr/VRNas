@@ -7,21 +7,18 @@ import { useState } from "react";
 import { useClickOutside } from "@/hooks/useClickOutSide";
 import style from "./menuItems.module.scss";
 
-export const MenuItems = ({
-  item,
-  refNav,
-}: {
+type IMenuItems = {
   item: IConfigNavbar;
   refNav: React.RefObject<HTMLSelectElement>;
-}) => {
+  mobile: boolean;
+};
+
+export const MenuItems = ({ item, refNav, mobile }: IMenuItems) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useClickOutside(refNav, () => setIsOpen(false));
 
-  const toggleIsOpen = () => {
-    setIsOpen(!isOpen);
-  };
-  const toggleIsOpenWithEvent = (
+  const toggleIsOpen = (
     e: React.BaseSyntheticEvent<
       MouseEvent,
       EventTarget & HTMLAnchorElement,
@@ -33,24 +30,22 @@ export const MenuItems = ({
   };
 
   return (
-    <li className={style.menu__item}>
+    <li className={`${mobile ? style.menu__item_mobile : style.menu__item}`}>
       {item.children ? (
         <>
-          <Link
-            href={item.href}
-            className={style.menu__link}
-            onClick={toggleIsOpenWithEvent}
-          >
-            {item.title}
-          </Link>
           <SubMenu
             data={item.children}
             isOpen={isOpen}
             onClick={toggleIsOpen}
+            mobile={mobile}
+            title={item.title}
           />
         </>
       ) : (
-        <Link href={item.href} className={style.menu__link}>
+        <Link
+          href={item.href}
+          className={`${mobile ? style.menu__link_mobile : style.menu__link}`}
+        >
           {item.title}
         </Link>
       )}

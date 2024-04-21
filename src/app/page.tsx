@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Advantages />
+      {/* <Advantages />
       <About />
       <OurService />
       <Choose />
@@ -23,7 +23,7 @@ export default function Home() {
       <Pricing />
       <Partners />
       <Articles />
-      <Subscribe />
+      <Subscribe /> */}
     </>
   );
 }

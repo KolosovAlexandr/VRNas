@@ -6,11 +6,11 @@ export const LinkTransparent = ({
   text,
   className,
   href = "#",
-  image,
+  src,
 }: IConfigLink) => {
-  return image ? (
+  return src ? (
     <Link href={href} className={`${style.linkTransparent} ${className}`}>
-      <img className={style.linkTransparent__image} src={image} alt="icon" />
+      <img className={style.linkTransparent__image} src={src} alt="icon" />
     </Link>
   ) : (
     <Link href={href} className={`${style.linkTransparent} ${className}`}>

@@ -8,4 +8,10 @@
     align-items: center;
     gap: 4rem;
   }
+  &__list_mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    list-style-type: none;
+  }
 }

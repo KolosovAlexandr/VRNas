@@ -42,6 +42,9 @@ body {
   font-family: "ChakraPetch";
   font-size: 0.875rem;
   background-color: $black;
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 html,

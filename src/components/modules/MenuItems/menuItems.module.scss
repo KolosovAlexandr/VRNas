@@ -1,20 +1,32 @@
 @import "../../../styles/variables.scss";
 
 .menu {
-  &__item {
+  &__item,
+  &__item_mobile {
     display: flex;
-    align-items: center;
   }
-  &__link {
+  &__link,
+  &__link_mobile {
     text-decoration: none;
     color: $grey-light;
-    font-size: 1rem;
     font-weight: 300;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
+  }
+  &__item {
+    align-items: center;
+  }
+  &__item_mobile {
+    flex-direction: column;
+  }
+  &__link {
+    font-size: 1rem;
     &:hover {
       transition: 0.5s;
       color: $white;
     }
+  }
+  &__item_mobile {
+    font-size: 1.25rem;
   }
 }

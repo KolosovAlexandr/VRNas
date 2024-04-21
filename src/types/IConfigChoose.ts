@@ -1,5 +1,5 @@
 export type IConfigChoose = {
-    id?: number;
+    id?: string;
     title: string;
     text: string;
     className?: string

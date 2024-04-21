@@ -14,8 +14,6 @@ export const Video = ({
       <video
         className={style.video}
         src={video}
-        height={127}
-        width={196}
         poster={poster}
         controls={true}
       ></video>

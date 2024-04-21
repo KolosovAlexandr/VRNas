@@ -2,10 +2,26 @@
 import { useState, useEffect } from "react";
 import { Logo } from "@/components/elements/Logo";
 import { Navbar } from "../Navbar";
+import { Burger } from "@/components/elements/Burger";
+import { usePathname } from "next/navigation";
 import style from "./header.module.scss";
 
 export const Header = () => {
   const [topScroll, setTopScroll] = useState(0);
+  const [openBurger, setOpenBurger] = useState(false);
+
+  const path = usePathname();
+  console.log(path);
+
+  const toggleOpenBurger = () => {
+    setOpenBurger(!openBurger);
+    if (openBurger) document.body.classList.remove("lock");
+    if (!openBurger) document.body.classList.add("lock");
+  };
+
+  useEffect(() => {
+    setOpenBurger(false);
+  }, [path]);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -28,8 +44,18 @@ export const Header = () => {
           </div>
         </div>
         <div className={style.header__column}>
-          <p>contact us</p>
+          <button className={style.header__contact}>
+            <span>Contact us</span>
+          </button>
+          <Burger active={openBurger} toggleOpenBurger={toggleOpenBurger} />
         </div>
+      </div>
+      <div
+        className={`${style.header__menu_mobile} ${
+          openBurger ? style.active : ""
+        }`}
+      >
+        {openBurger && <Navbar mobile={true} />}
       </div>
     </header>
   );
