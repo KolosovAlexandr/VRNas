@@ -1,5 +1,5 @@
 import style from "./advantages.module.scss";
-import { AdvantagesItem } from "@/components/modules/AdvantagesItem";
+import { AdvantagesItem } from "@/components/section/Advantages/AdvantagesItem";
 import { configAdvantages } from "@/constants/configurationAdvantages";
 
 export const Advantages = () => {

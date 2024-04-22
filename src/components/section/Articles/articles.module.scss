@@ -25,8 +25,7 @@
   }
   &__column {
     &:first-child {
-      flex: 55%;
-      flex-shrink: 0;
+      flex: 0 0 55%;
       &::before {
         content: "";
         position: absolute;
@@ -41,14 +40,15 @@
       }
     }
     &:last-child {
-      flex: 45%;
-      flex-shrink: 0;
+      flex: 0 0 45%;
+      position: relative;
       &::before {
         content: "";
         position: absolute;
-        top: 0%;
-        left: 50%;
-        width: 100%;
+        bottom: 0;
+        left: -6.25rem;
+        right: 0;
+        width: 500%;
         height: 37.5rem;
         background: $black-light;
         border: 0.01rem solid transparent;
@@ -64,8 +64,7 @@
     margin-bottom: 2rem;
     margin-top: 2rem;
   }
-  &__recent {
-  }
+
   &__list {
     padding-right: 2.81rem;
     height: 31.25rem;
@@ -86,6 +85,18 @@
       border-bottom: 1px solid $grey;
     }
   }
+  &__btn_mobile {
+    display: none;
+    justify-content: center;
+    & .btn {
+      color: $white;
+      text-transform: uppercase;
+      & span {
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
 }
 
 .top {
@@ -94,14 +105,88 @@
   justify-content: space-between;
   gap: 2.5rem;
   margin-bottom: 6.25rem;
-  &__column {
-  }
   &__btn {
     color: $white;
     text-transform: uppercase;
     & span {
       font-weight: 600;
       letter-spacing: 0.1rem;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .articles {
+    &__column {
+      &:first-child {
+        flex: 0 0 50%;
+      }
+      &:last-child {
+        flex: 0 1 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .articles {
+    &__body {
+      gap: 1.875rem;
+    }
+  }
+  .top {
+    &__subtitle {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .articles {
+    &__body {
+      display: block;
+    }
+    &__column {
+      width: 100%;
+      &:first-child {
+        margin-bottom: 1.875rem;
+      }
+      &:last-child {
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: $black-light;
+          border: 1px solid transparent;
+          border-image: $border;
+        }
+      }
+    }
+    &__overflow {
+      padding: 1.25rem 0.94rem;
+    }
+    &__list {
+      padding-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .articles {
+    &__body {
+      margin-bottom: 1.875rem;
+    }
+    &__btn_mobile {
+      display: flex;
+    }
+  }
+  .top {
+    margin: 0;
+    &__btn {
+      display: none;
     }
   }
 }

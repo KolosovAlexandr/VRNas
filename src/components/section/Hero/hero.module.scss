@@ -6,7 +6,7 @@
   &::before {
     content: "";
     position: absolute;
-    left: -29%;
+    left: 0;
     bottom: -40%;
     width: 68.75rem;
     height: 45rem;
@@ -22,6 +22,7 @@
     padding: 0 0.94rem;
     max-width: 75rem;
     margin: 0 auto;
+    position: relative;
   }
   &__column {
     flex: 0 1 50%;
@@ -31,9 +32,15 @@
   }
   &__image {
     position: relative;
+    padding-bottom: 118.5%;
+
     & img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
     &::before {
       content: "";
@@ -121,6 +128,59 @@
     }
     &__title {
       font-size: 3rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .hero {
+    &__container {
+      gap: 1.25rem;
+    }
+    &__action {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .hero {
+    &__container {
+      align-items: flex-end;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    &::before {
+      bottom: -10%;
+    }
+    &__container {
+      display: block;
+    }
+    &__action {
+      margin-bottom: 0.94rem;
+    }
+    &__image {
+      padding-bottom: 80%;
+      margin-right: -70%;
+    }
+    &__video {
+      position: absolute;
+      bottom: 5%;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .hero {
+    &__image {
+      padding-bottom: 118.5%;
+      z-index: -1;
+    }
+    &__video {
+      bottom: 5%;
     }
   }
 }

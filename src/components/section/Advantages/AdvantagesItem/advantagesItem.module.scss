@@ -1,4 +1,4 @@
-@import "../../../styles/variables.scss";
+@import "../../../../styles/variables.scss";
 
 .column {
   flex: 1 1 33.333%;
@@ -18,5 +18,23 @@
   &__text {
     line-height: 200%;
     color: $grey;
+  }
+}
+
+@media (max-width: 991px) {
+  .column {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .column {
+    flex: 1 1 50%;
+  }
+}
+
+@media (max-width: 479px) {
+  .column {
+    flex: 1 1 100%;
   }
 }

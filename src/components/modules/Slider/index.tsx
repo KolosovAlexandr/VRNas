@@ -132,13 +132,13 @@ export const Slider = () => {
 
   return (
     <div className={style.slider}>
-      <div className={style.slider__wrapper}>
+      <div className={style.slider__swiper}>
         <div
           id="swiper"
           className={
             mouseClicked
-              ? `${style.slider__swiper} ${style.active}`
-              : style.slider__swiper
+              ? `${style.slider__wrapper} ${style.active}`
+              : style.slider__wrapper
           }
           onTouchStart={(e) => touchStartHandler(e)}
           onTouchMove={(e) => touchMoveHandler(e)}
@@ -159,7 +159,7 @@ export const Slider = () => {
                   </Link>
                   <LinkTransparent
                     className={style.slide__btn}
-                    image={arrowNext.src}
+                    src={arrowNext.src}
                     href="#"
                   />
                 </div>

@@ -1,6 +1,6 @@
 import { LinkTransparent } from "@/components/elements/LinkTransparent";
 import { IConfigArticles } from "@/types/IConfigArticles";
-import arrowNext from "../../../../public/assets/icons/Arrow-next.svg";
+import arrowNext from "../../../../../public/assets/icons/Arrow-next.svg";
 import Link from "next/link";
 import style from "./articlesItem.module.scss";
 
@@ -17,7 +17,7 @@ export const ArticlesItem = ({ id, tag, text, src, alt }: IConfigArticles) => {
       <LinkTransparent
         className={`${style.article__btn} ${style.button}`}
         href="#"
-        image={arrowNext.src}
+        src={arrowNext.src}
       />
     </div>
   );

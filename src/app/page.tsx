@@ -13,17 +13,17 @@ import { Subscribe } from "@/components/section/Subscribe";
 export default function Home() {
   return (
     <>
-      <Hero />
-      {/* <Advantages />
-      <About />
-      <OurService />
+      {/* <Hero />
+      <Advantages />
+      <About /> */}
+      {/* <OurService />
       <Choose />
       <Started />
       <Testimonial />
       <Pricing />
-      <Partners />
+      <Partners /> */}
       <Articles />
-      <Subscribe /> */}
+      {/* <Subscribe /> */}
     </>
   );
 }

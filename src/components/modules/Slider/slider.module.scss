@@ -1,18 +1,17 @@
 @import "../../../styles/variables.scss";
 
 .slider {
-  &__wrapper {
+  width: 40.25rem;
+  &__swiper {
     overflow: hidden;
   }
 
-  &__swiper {
-    cursor: grab;
+  &__wrapper {
+    display: flex;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
     position: relative;
-    max-width: 40.25rem;
+    cursor: grab;
     &.active {
       cursor: grabbing;
     }
@@ -85,6 +84,50 @@
       background: $white;
       flex: 0 0 1.0625rem;
       transition: all 0.5s ease 0s;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .slider {
+    width: 619px;
+  }
+  .slide {
+    width: 619px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .slider {
+    width: calc(100vw * 0.475);
+  }
+  .slide {
+    width: calc(100vw * 0.475);
+  }
+}
+
+@media (max-width: 991px) {
+  .slider {
+    width: 100%;
+  }
+  .slide {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .slide {
+    &__link {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .slide {
+    min-height: 16.625rem;
+    &__link {
+      font-size: 1.25rem;
     }
   }
 }

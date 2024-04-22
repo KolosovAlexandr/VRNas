@@ -1,8 +1,7 @@
-@import "../../../styles/variables.scss";
+@import "../../../../styles/variables.scss";
 
 .article {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 0.94rem;
 
@@ -24,6 +23,7 @@
     padding: 0.125rem 0.625rem;
     background: $scroll;
     border-radius: 1rem;
+    white-space: nowrap;
   }
 
   &__text {
@@ -35,8 +35,29 @@
   }
 
   &__btn {
+    margin-left: auto;
     &.button {
       padding: 0.72rem 0.82rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .article {
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .article {
+    gap: 0.625rem;
+    &__text {
+      font-size: 0.875rem;
+    }
+    &__image {
+      max-width: 101px;
     }
   }
 }

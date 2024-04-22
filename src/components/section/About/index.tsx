@@ -19,7 +19,7 @@ export const About = () => {
             <Video
               poster={poster.src}
               video={configVideo[1].src}
-              className={style.about__action}
+              className={style.about__video}
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { Title } from "@/components/elements/Title/Index";
 import { configArticles } from "@/constants/configurationArticles";
-import { ArticlesItem } from "@/components/modules/ArticlesItem";
+import { ArticlesItem } from "@/components/section/Articles/ArticlesItem";
 import { LinkTransparent } from "@/components/elements/LinkTransparent";
 import { Slider } from "@/components/modules/Slider";
 import style from "./articles.module.scss";
@@ -53,7 +53,9 @@ export const Articles = () => {
             </div>
           </div>
         </div>
-        <div className={style.articles__btn_mobile}></div>
+        <div className={style.articles__btn_mobile}>
+          <LinkTransparent text="see all" className={style.btn} href="#" />
+        </div>
       </div>
     </section>
   );

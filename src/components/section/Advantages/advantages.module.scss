@@ -19,3 +19,11 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 991px) {
+  .advantages {
+    &__body {
+      padding: 1.875rem 0 0 0;
+    }
+  }
+}

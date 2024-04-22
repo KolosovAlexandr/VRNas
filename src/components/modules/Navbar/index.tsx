@@ -10,6 +10,11 @@ export const Navbar = ({ mobile = false }: { mobile?: boolean }) => {
   return (
     <nav className={style.menu} ref={refNav}>
       <Menu data={configNavbar} refNav={refNav} mobile={mobile} />
+      {mobile && (
+        <button className={style.menu__btn}>
+          <span>Contact us</span>
+        </button>
+      )}
     </nav>
   );
 };

@@ -15,3 +15,11 @@
     list-style-type: none;
   }
 }
+
+@media (max-width: 991px) {
+  .menu {
+    &__list {
+      gap: 1.875rem;
+    }
+  }
+}

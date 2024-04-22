@@ -39,7 +39,11 @@ export const Hero = () => {
                 Client
               </div>
             </div>
-            <Video poster={poster.src} video={configVideo[0].src} />
+            <Video
+              poster={poster.src}
+              video={configVideo[0].src}
+              className={style.hero__video}
+            />
           </div>
         </div>
         <div className={style.hero__column}>
