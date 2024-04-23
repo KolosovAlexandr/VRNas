@@ -1,5 +1,5 @@
 import { Title } from "@/components/elements/Title/Index";
-import { ChooseItem } from "@/components/modules/ChooseItem";
+import { ChooseItem } from "@/components/section/Choose/ChooseItem";
 import { Video } from "@/components/elements/Video";
 import { configChoose } from "@/constants/configurationChoose";
 import { configVideo } from "@/constants/configurationVideo";
@@ -40,7 +40,7 @@ export const Choose = () => {
             </div>
             <Video
               video={configVideo[2].src}
-              className={style.choose__action}
+              className={style.choose__video}
               poster={poster.src}
             />
           </div>

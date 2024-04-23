@@ -11,7 +11,6 @@ export const Header = () => {
   const [openBurger, setOpenBurger] = useState(false);
 
   const path = usePathname();
-  console.log(path);
 
   const toggleOpenBurger = () => {
     setOpenBurger(!openBurger);

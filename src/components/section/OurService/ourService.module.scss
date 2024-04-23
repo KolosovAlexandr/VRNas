@@ -46,3 +46,27 @@
     margin: 0 -0.94rem -1.875rem;
   }
 }
+
+@media (max-width: 1200px) {
+  .service {
+    &__subtitle {
+      font-size: 2rem;
+    }
+    &__content {
+      margin: 0 -0.47rem -0.94rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .service {
+    &__top {
+      display: block;
+    }
+    &__column {
+      &:first-child {
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+}

@@ -7,47 +7,47 @@
     width: 6.25rem;
     height: 6.25rem;
     padding: 0.94rem;
-    background: url("../../../../public/assets/vector/ClientBg.svg") no-repeat
-      center / 100%;
+    background: url("../../../../../public/assets/vector/ClientBg.svg")
+      no-repeat center / 100%;
     & img {
-      max-width: 4.375rem;
+      max-width: 100%;
     }
   }
 }
 
 .partner:nth-of-type(1) {
-  top: 50%;
-  left: 23%;
+  top: 60%;
+  left: 2%;
   animation: bounce ease 8s infinite;
 }
 .partner:nth-of-type(2) {
-  top: 29%;
-  left: 26%;
+  top: 35%;
+  left: 7%;
   animation: bounce ease 6s infinite;
 }
 .partner:nth-of-type(3) {
-  top: 11%;
-  left: 33%;
+  top: 13%;
+  left: 21%;
   animation: bounce ease 7s infinite;
 }
 .partner:nth-of-type(4) {
   top: 3%;
-  left: 47%;
+  left: 45%;
   animation: bounce ease 6s infinite;
 }
 .partner:nth-of-type(5) {
-  top: 11%;
-  left: 60%;
+  top: 13%;
+  left: 69%;
   animation: bounce ease 8s infinite;
 }
 .partner:nth-of-type(6) {
-  top: 29%;
-  left: 68%;
+  top: 35%;
+  left: 83%;
   animation: bounce ease 6s infinite;
 }
 .partner:nth-of-type(7) {
-  top: 50%;
-  left: 71%;
+  top: 60%;
+  left: 88%;
   animation: bounce ease 7s infinite;
 }
 
@@ -63,5 +63,15 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 991px) {
+  .partner {
+    &__logo {
+      width: clamp(2.5rem, 1.4rem + 6.8vw, 6.25rem);
+      height: clamp(2.5rem, 1.4rem + 6.8vw, 6.25rem);
+      padding: clamp(0.1875rem, -0.085rem + 1.36vw, 0.94rem);
+    }
   }
 }

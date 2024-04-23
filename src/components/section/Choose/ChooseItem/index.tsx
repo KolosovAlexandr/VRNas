@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { IConfigChoose } from "@/types/IConfigChoose";
-import arrow from "../../../../public/assets/icons/Arrow down.svg";
+import arrow from "../../../../../public/assets/icons/Arrow down.svg";
 import style from "./chooseItem.module.scss";
 
 export const ChooseItem = ({ className, title, text }: IConfigChoose) => {

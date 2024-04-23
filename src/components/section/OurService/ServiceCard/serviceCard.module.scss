@@ -1,0 +1,212 @@
+@import "../../../../styles/variables.scss";
+
+.card {
+  padding: 0 0.94rem;
+  margin-bottom: 1.875rem;
+  flex: 0 0 33.333%;
+  position: relative;
+  &:nth-child(2),
+  &:nth-child(5) {
+    top: 3.75rem;
+  }
+  &:nth-child(3),
+  &:nth-child(6) {
+    top: 7.5rem;
+  }
+  &__body {
+    padding: 2.375rem 2rem 1.5rem;
+    background: $black-light;
+    border: 0.01rem solid transparent;
+    border-image: $border;
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $black-light;
+      transition: 0.3s;
+      opacity: 0;
+    }
+  }
+  &__top {
+    display: block;
+  }
+
+  &__image {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 3.75rem;
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+  &__btn_mobile {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+    background: url("../../../../../public/assets/icons/Arrow\ down.svg") center /
+      cover no-repeat;
+    border: none;
+    margin-left: auto;
+    transition: 0.3s;
+    transform: 0deg;
+    &.active {
+      transition: 0.3s;
+      transform: rotateX(180deg);
+    }
+  }
+
+  &__spoiler {
+    display: block;
+  }
+  &__content {
+    display: block;
+  }
+
+  &__text {
+    color: $grey;
+    line-height: 200%;
+  }
+  &__link {
+    display: inline-block;
+    position: absolute;
+    right: 27%;
+    bottom: 0;
+    transition: all 0.3s ease 0s;
+    opacity: 0;
+    & span {
+      font-weight: 600;
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+  }
+}
+
+@media (hover) {
+  .card {
+    &__body {
+      &:hover {
+        border-image: linear-gradient(to right, $blue, $purple) 1;
+        &::before {
+          opacity: 0.8;
+        }
+        .card__link {
+          transform: translateY(-50%);
+          transition: 0.3s;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (pointer: coarse) {
+  .card {
+    &__link {
+      position: relative;
+      margin-top: 1.25rem;
+      right: 0;
+      opacity: 1;
+    }
+    &__image {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .card {
+    margin-bottom: 0.94rem;
+    padding: 0 0.47rem;
+    &__body {
+      padding: 1.875rem 1.25rem 1.25rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .card {
+    flex: 1 1 50%;
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(5),
+    &:nth-child(6) {
+      top: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    flex: 1 1 100%;
+    &__body {
+      padding: 0;
+      overflow: hidden;
+      &.active {
+        transition: all 0.5s ease 0s;
+        border-image: linear-gradient(to right, $blue, $purple) 1;
+        .card__spoiler {
+          height: 141px;
+          transition: all 0.5s ease 0s;
+        }
+      }
+    }
+    &__spoiler {
+      height: 0;
+      transition: all 0.5s ease 0s;
+    }
+    &__content {
+      padding: 0 1.25rem 1.25rem;
+    }
+    &__top {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.25rem;
+    }
+    &__btn_mobile {
+      display: block;
+    }
+    &__image,
+    &__title {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .card {
+    &__link {
+      width: 100%;
+      text-align: center;
+    }
+    &__body {
+      &.active {
+        .card__spoiler {
+          height: 160px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 355px) {
+  .card {
+    &__body {
+      &.active {
+        .card__spoiler {
+          height: 180px;
+        }
+      }
+    }
+  }
+}

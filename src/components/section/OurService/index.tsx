@@ -1,5 +1,5 @@
 import { Title } from "@/components/elements/Title/Index";
-import { ServiceCard } from "@/components/modules/ServiceCard";
+import { ServiceCard } from "@/components/section/OurService/ServiceCard";
 import { configService } from "@/constants/configurationService";
 import style from "./ourService.module.scss";
 
