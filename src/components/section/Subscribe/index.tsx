@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import message from "../../../../public/assets/icons/Message.svg";
 import send from "../../../../public/assets/icons/Send.svg";
@@ -8,6 +9,7 @@ export const Subscribe = () => {
   const [value, setValue] = useState("");
 
   const onChangeInputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
     setValue(e.target.value);
   };
 
@@ -32,14 +34,13 @@ export const Subscribe = () => {
                 className={style.form__image}
               />
               <input
-                onBlur={() => {}}
                 className={style.form__input}
                 value={value}
                 onChange={onChangeInputHandler}
                 type="text"
                 placeholder="Enter your email address"
               />
-              <button className={style.form__btn}>
+              <button className={style.form__btn} type="submit">
                 <img src={send.src} alt="send" />
               </button>
             </form>

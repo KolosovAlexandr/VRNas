@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Title } from "@/components/elements/Title/Index";
-import { TestimonialItem } from "@/components/modules/TestimonialItem";
+import { TestimonialItem } from "@/components/section/Testimonial/TestimonialItem";
 import { configTestimonial } from "@/constants/configurationTestimonial";
 import image from "../../../../public/assets/images/man-4.png";
 import style from "./testimonial.module.scss";

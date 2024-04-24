@@ -1,6 +1,6 @@
-import client_1 from "../../public/assets/images/Client-1.png";
-import client_2 from "../../public/assets/images/Client-2.png";
-import client_3 from "../../public/assets/images/Client-3.png";
+import client_1 from "../../public/assets/images/client-5.webp";
+import client_2 from "../../public/assets/images/client-1.webp";
+import client_3 from "../../public/assets/images/client-6.webp";
 
 type IConfigHero = {
   id: number,

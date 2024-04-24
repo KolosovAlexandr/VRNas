@@ -1,5 +1,18 @@
-function About_us() {
-  return <div>about</div>;
+import type { Metadata } from "next";
+import { TitlePage } from "@/components/section/TitlePage";
+import { about } from "@/constants/pages/about";
+
+export const metadata: Metadata = {
+  title: "VRNas | About",
+  description: "",
+};
+
+function AboutUs() {
+  return (
+    <>
+      <TitlePage title="About Us" list={about} />
+    </>
+  );
 }
 
-export default About_us;
+export default AboutUs;

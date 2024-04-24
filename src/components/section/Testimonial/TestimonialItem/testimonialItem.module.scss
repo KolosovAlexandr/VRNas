@@ -1,0 +1,208 @@
+@import "../../../../styles/variables.scss";
+
+.client {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease 0s;
+  &:nth-child(1) {
+    top: 69%;
+    left: 45%;
+  }
+  &:nth-child(2) {
+    top: 20%;
+    left: 60%;
+  }
+  &:nth-child(3) {
+    top: 51%;
+    left: 85%;
+  }
+  &:nth-child(4) {
+    top: 77%;
+    left: 13%;
+  }
+  &:nth-child(5) {
+    top: 23%;
+    left: 0%;
+  }
+  &:nth-child(6) {
+    top: 89%;
+    left: 76%;
+  }
+  &__btn {
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    width: 4.7rem;
+    height: 4.7rem;
+    border-radius: 50%;
+    background: url("../../../../../public/assets/vector/ClientBg.svg") 0 0 /
+      100% 100% no-repeat;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../../../../../public/assets/vector/ClientActiveBg.svg")
+        0 0 / 100% 100% no-repeat;
+      transition: all 0.3s ease 0s;
+      opacity: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      height: 50%;
+      background: $bg-linear;
+      transform: translate(-50%, -50%) rotate(-20deg);
+      filter: blur(10px);
+      transition: all 0.3s ease 0s;
+      opacity: 0;
+    }
+    &.active {
+      &::after,
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid $black;
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  &__body {
+    background: url("../../../../../public/assets/vector/TextBg.svg") no-repeat
+      center center;
+    font-size: 0.75rem;
+    line-height: 1.66;
+    color: $grey;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 15px);
+    width: 18.75rem;
+    padding: 1.125rem;
+    padding-left: 1.44rem;
+    transform-origin: 0 0;
+    transform: rotateX(90deg) translateY(-50%);
+    transition: all 0.5s ease 0s;
+    &.active {
+      transform: rotateX(0deg) translateY(-50%);
+    }
+  }
+  &__text {
+    margin-bottom: 0.5rem;
+  }
+  &__name {
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    border-image: $bg-linear 1;
+    span {
+      color: $white;
+    }
+  }
+}
+
+@media (max-width: 1650px) {
+  .client.active {
+    &:nth-child(3) {
+      transition: all 0.5s ease 0s;
+      transform: translateX(-18.75rem);
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .client.active {
+    &:nth-child(6) {
+      transition: all 0.5s ease 0s;
+      transform: translateX(-18.75rem);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .client.active {
+    &:nth-child(2) {
+      transition: all 0.5s ease 0s;
+      transform: translateX(-18.75rem);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .client {
+    &:nth-child(1) {
+      top: 76%;
+      left: 45%;
+    }
+    &:nth-child(2) {
+      top: 18%;
+      left: 60%;
+    }
+    &:nth-child(3) {
+      top: 66%;
+      left: 72%;
+    }
+    &:nth-child(4) {
+      top: 84%;
+      left: 6%;
+    }
+    &:nth-child(5) {
+      top: 7%;
+      left: 0;
+    }
+    &:nth-child(6) {
+      top: 93%;
+      left: 67%;
+    }
+  }
+  .client.active {
+    &:nth-child(2) {
+      transform: translateX(0);
+      left: 0;
+    }
+    &:nth-child(3) {
+      transform: translateX(0);
+      left: 0;
+    }
+    &:nth-child(1) {
+      transform: translateX(0);
+      left: 0;
+    }
+    &:nth-child(4) {
+      transform: translateX(0);
+      left: 0;
+    }
+    &:nth-child(6) {
+      transform: translateX(0);
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .client {
+    &__btn {
+      width: 3.125rem;
+      height: 3.125rem;
+    }
+    &__image {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}

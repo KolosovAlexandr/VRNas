@@ -20,6 +20,12 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .advantages {
+    margin-bottom: clamp(5rem, 4.1rem + 4.55vw, 7.5rem);
+  }
+}
+
 @media (max-width: 991px) {
   .advantages {
     &__body {

@@ -1,5 +1,5 @@
 import { IConfigPricing } from "@/types/IConfigPricing";
-import icon from "../../../../public/assets/icons/pricing-1.svg";
+import icon from "../../../../../public/assets/icons/pricing-1.svg";
 import style from "./pricingItem.module.scss";
 
 export const PricingItem = ({ title, text }: IConfigPricing) => {

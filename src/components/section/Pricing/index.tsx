@@ -1,5 +1,5 @@
 import { Title } from "@/components/elements/Title/Index";
-import { PricingItem } from "@/components/modules/PricingItem";
+import { PricingItem } from "@/components/section/Pricing/PricingItem";
 import { configPricing } from "@/constants/configurationPricing";
 import { LinkGradient } from "@/components/elements/LinkGradient";
 import image from "../../../../public/assets/images/man-5.png";

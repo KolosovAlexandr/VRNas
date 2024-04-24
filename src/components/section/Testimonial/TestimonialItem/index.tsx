@@ -11,21 +11,15 @@ export const TestimonialItem = ({
   toggleClick,
 }: IConfigTestimonial) => {
   return (
-    <div className={style.client}>
+    <div className={`${style.client} ${active ? style.active : ""}`}>
       <button
         id={id}
         onClick={() => toggleClick(id)}
-        className={
-          active ? `${style.client__btn} ${style.active}` : style.client__btn
-        }
+        className={`${style.client__btn} ${active ? style.active : ""}`}
       >
-        <img src={clientImg} alt="" />
+        <img src={clientImg} alt="" className={style.client__image} />
       </button>
-      <div
-        className={
-          active ? `${style.client__body} ${style.active}` : style.client__body
-        }
-      >
+      <div className={`${style.client__body} ${active ? style.active : ""}`}>
         <div className={style.client__text}>{text}</div>
         <div className={style.client__name}>
           <span>{name}</span> - {job}

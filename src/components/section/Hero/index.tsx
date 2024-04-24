@@ -26,16 +26,20 @@ export const Hero = () => {
             />
           </div>
           <div className={style.hero__action}>
-            <div className={`${style.hero__clients} ${style.clients}`}>
-              <ul className={style.clients__list}>
+            <div className={`${style.hero__clients} ${style.client}`}>
+              <ul className={style.client__list}>
                 {configHero.map((el) => (
-                  <li key={el.id} className={style.clients__item}>
-                    <img src={el.src} alt={el.alt} />
+                  <li key={el.id} className={style.client__item}>
+                    <img
+                      src={el.src}
+                      alt={el.alt}
+                      className={style.client__image}
+                    />
                   </li>
                 ))}
               </ul>
-              <div className={style.clients__text}>
-                <span className={style.clients__underline}>32k+</span> Happy
+              <div className={style.client__text}>
+                <span className={style.client__underline}>32k+</span> Happy
                 Client
               </div>
             </div>

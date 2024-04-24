@@ -17,7 +17,7 @@
     padding: 2.5rem 4.375rem 1.875rem;
   }
   &__column {
-    flex: 50%;
+    flex: 0 1 50%;
     &:first-child {
       flex-shrink: 0;
     }
@@ -35,6 +35,8 @@
 
 .form {
   display: flex;
+  width: 22.81rem;
+  flex: 0 1 22.81rem;
   background: $input;
   padding: 0 0 0 1rem;
   &__image {
@@ -62,5 +64,57 @@
     padding: 0.92rem;
     border: none;
     background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (max-width: 1200px) {
+  .subscribe {
+    margin-bottom: clamp(5rem, 4.1rem + 4.55vw, 7.5rem);
+    &__body {
+      padding: 1.875rem 3.125rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .subscribe {
+    &__body {
+      padding: 1.25rem 2.5rem;
+      gap: 1.875rem;
+    }
+    &__title {
+      font-size: 1.875rem;
+    }
+    &__column {
+      &:first-child {
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .subscribe {
+    &__body {
+      padding: 1.25rem 0.625rem;
+      display: block;
+    }
+    &__column {
+      &:first-child {
+        text-align: center;
+        margin-bottom: 1.25rem;
+      }
+      &:last-child {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .subscribe {
+    &__title {
+      font-size: 1.5rem;
+    }
   }
 }

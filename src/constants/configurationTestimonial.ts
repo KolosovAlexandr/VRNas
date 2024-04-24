@@ -1,9 +1,9 @@
-import client1 from "../../public/assets/images/Client-1.png";
-import client2 from "../../public/assets/images/Client-2.png";
-import client3 from "../../public/assets/images/Client-3.png";
-import client4 from "../../public/assets/images/Client-4.png";
-import client5 from "../../public/assets/images/Client-5.png";
-import client6 from "../../public/assets/images/Client-6.png";
+import client1 from "../../public/assets/images/client-1.webp";
+import client2 from "../../public/assets/images/client-2.webp";
+import client3 from "../../public/assets/images/client-3.webp";
+import client4 from "../../public/assets/images/client-4.webp";
+import client5 from "../../public/assets/images/client-5.webp";
+import client6 from "../../public/assets/images/client-6.webp";
 import { IConfigTestimonialWithoutToggle } from "@/types/IConfigTestimonialWithoutToggle";
 
 export const configTestimonial: IConfigTestimonialWithoutToggle[] = [
