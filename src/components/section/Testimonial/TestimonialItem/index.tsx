@@ -1,5 +1,15 @@
-import { IConfigTestimonial } from "@/types/IConfigTestimonial";
+import Image from "next/image";
 import style from "./testimonialItem.module.scss";
+
+type ITestimonialItem = {
+  id: string;
+  clientImg: string;
+  text: string;
+  name: string;
+  job: string;
+  active: boolean;
+  toggleClick: (id: string) => void;
+};
 
 export const TestimonialItem = ({
   clientImg,
@@ -9,7 +19,7 @@ export const TestimonialItem = ({
   id,
   active,
   toggleClick,
-}: IConfigTestimonial) => {
+}: ITestimonialItem) => {
   return (
     <div className={`${style.client} ${active ? style.active : ""}`}>
       <button
@@ -17,7 +27,13 @@ export const TestimonialItem = ({
         onClick={() => toggleClick(id)}
         className={`${style.client__btn} ${active ? style.active : ""}`}
       >
-        <img src={clientImg} alt="" className={style.client__image} />
+        <Image
+          src={clientImg}
+          alt="client"
+          className={style.client__image}
+          width={50}
+          height={50}
+        />
       </button>
       <div className={`${style.client__body} ${active ? style.active : ""}`}>
         <div className={style.client__text}>{text}</div>

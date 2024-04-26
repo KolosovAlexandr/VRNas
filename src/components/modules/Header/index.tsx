@@ -6,6 +6,7 @@ import { Burger } from "@/components/elements/Burger";
 import { usePathname } from "next/navigation";
 import style from "./header.module.scss";
 
+// eslint-disable-next-line react/display-name
 export const Header = () => {
   const [topScroll, setTopScroll] = useState(0);
   const [openBurger, setOpenBurger] = useState(false);
@@ -20,6 +21,7 @@ export const Header = () => {
 
   useEffect(() => {
     setOpenBurger(false);
+    document.body.classList.remove("lock");
   }, [path]);
 
   useEffect(() => {

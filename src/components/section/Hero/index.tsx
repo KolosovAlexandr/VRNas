@@ -1,7 +1,8 @@
 import { LinkGradient } from "@/components/elements/LinkGradient";
-import { configHero } from "@/constants/configurationHero";
 import { Video } from "@/components/elements/Video";
-import { configVideo } from "@/constants/configurationVideo";
+import { dataVideo } from "@/constants/video";
+import { dataHero } from "@/constants/hero";
+import Image from "next/image";
 import poster from "../../../../public/assets/images/poster-1.png";
 import image from "../../../../public/assets/images/man-1.png";
 import style from "./hero.module.scss";
@@ -28,12 +29,14 @@ export const Hero = () => {
           <div className={style.hero__action}>
             <div className={`${style.hero__clients} ${style.client}`}>
               <ul className={style.client__list}>
-                {configHero.map((el) => (
+                {dataHero.map((el) => (
                   <li key={el.id} className={style.client__item}>
-                    <img
+                    <Image
                       src={el.src}
                       alt={el.alt}
                       className={style.client__image}
+                      width={48}
+                      height={48}
                     />
                   </li>
                 ))}
@@ -45,14 +48,14 @@ export const Hero = () => {
             </div>
             <Video
               poster={poster.src}
-              video={configVideo[0].src}
+              video={dataVideo[0].src}
               className={style.hero__video}
             />
           </div>
         </div>
         <div className={style.hero__column}>
           <div className={style.hero__image}>
-            <img src={image.src} alt="image" />
+            <Image src={image.src} alt="image" width={522} height={622} />
           </div>
         </div>
       </div>

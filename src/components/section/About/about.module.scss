@@ -4,30 +4,43 @@
   margin-bottom: 7.5rem;
   &__container {
     display: flex;
-    align-items: flex-end;
-    gap: 4rem;
+    align-items: center;
+    justify-content: center;
     padding: 0 0.94rem;
+    gap: 4rem;
     max-width: 75rem;
     margin: 0 auto;
   }
-
   &__column {
-    flex: 50%;
+    &:first-child {
+      flex: 0 1 60%;
+    }
+    &:last-child {
+      flex: 0 1 40%;
+    }
   }
-
+  &__content {
+    display: block;
+  }
+  &__text {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $grey;
+    line-height: 1.75;
+  }
   &__media {
     position: relative;
   }
   &__image {
     position: relative;
     padding-bottom: 120%;
-    & img {
+    img {
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      padding-left: 1.45rem;
+      object-fit: contain;
     }
     &::before {
       content: "";
@@ -45,45 +58,18 @@
       content: "";
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: 13%;
       background: $black-light;
-      width: 73%;
-      height: 80%;
+      width: 80%;
+      height: 87%;
       z-index: -2;
     }
   }
   &__video {
     position: absolute;
-    bottom: -5%;
-    right: 0;
+    bottom: -13%;
+    left: -10%;
   }
-  &__text {
-    margin-bottom: 1.5rem;
-    line-height: 200%;
-    color: $grey;
-  }
-
-  &__list {
-    margin-bottom: 2rem;
-    list-style-type: none;
-  }
-
-  &__item {
-    font-size: 1rem;
-    line-height: 1.75;
-    &:not(:last-child) {
-      margin-bottom: 0.875rem;
-    }
-  }
-  &__btn {
-    padding: 1.15rem 2.4rem;
-  }
-}
-
-.list__item {
-  padding-left: 1.75rem;
-  background: url("../../../../public/assets/icons/check-box.svg") left center /
-    16px 16px no-repeat;
 }
 
 @media (max-width: 1200px) {
@@ -111,19 +97,17 @@
     &__container {
       display: block;
     }
-    &__column {
-      &:first-child {
-        margin-bottom: 3.75rem;
-      }
-    }
     &__image {
-      padding-bottom: 80%;
-      &::after {
-        height: 76%;
-      }
-      img {
-        object-fit: contain;
-        object-position: bottom;
+      padding-bottom: 70%;
+      margin-left: 10rem;
+    }
+    &__video {
+      bottom: 0;
+      left: 0;
+    }
+    &__column {
+      &:last-child {
+        text-align: end;
       }
     }
   }
@@ -132,7 +116,12 @@
 @media (max-width: 479px) {
   .about {
     &__image {
+      margin-left: 0;
       padding-bottom: 120%;
+    }
+    &__video {
+      bottom: -10%;
+      left: 5%;
     }
   }
 }

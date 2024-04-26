@@ -1,6 +1,6 @@
 import { Title } from "@/components/elements/Title/Index";
 import { LinkGradient } from "@/components/elements/LinkGradient";
-import { configVideo } from "@/constants/configurationVideo";
+import { dataVideo } from "@/constants/video";
 import poster from "../../../../public/assets/images/poster-4.webp";
 
 import style from "./started.module.scss";
@@ -19,7 +19,7 @@ export const Started = () => {
         </div>
         <div className={style.video}>
           <video
-            src={configVideo[3].src}
+            src={dataVideo[3].src}
             height={509}
             poster={poster.src}
             controls={true}

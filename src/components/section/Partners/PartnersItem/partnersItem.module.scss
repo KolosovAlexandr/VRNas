@@ -69,8 +69,8 @@
 @media (max-width: 991px) {
   .partner {
     &__logo {
-      width: clamp(2.5rem, 1.4rem + 6.8vw, 6.25rem);
-      height: clamp(2.5rem, 1.4rem + 6.8vw, 6.25rem);
+      width: clamp(2.5rem, 1.1rem + 6.7vw, 6.25rem);
+      height: clamp(2.5rem, 1.2rem + 6.7vw, 6.25rem);
       padding: clamp(0.1875rem, -0.085rem + 1.36vw, 0.94rem);
     }
   }

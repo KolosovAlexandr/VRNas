@@ -1,5 +1,5 @@
 import { Title } from "@/components/elements/Title/Index";
-import { configArticles } from "@/constants/configurationArticles";
+import { dataArticles } from "@/constants/articles";
 import { ArticlesItem } from "@/components/section/Articles/ArticlesItem";
 import { LinkTransparent } from "@/components/elements/LinkTransparent";
 import { Slider } from "@/components/modules/Slider";
@@ -37,10 +37,9 @@ export const Articles = () => {
               <h4 className={style.articles__title}>Recent Article</h4>
               <div className={style.articles__recent}>
                 <ul className={style.articles__list}>
-                  {configArticles.map((el) => (
+                  {dataArticles.map((el) => (
                     <li className={style.articles__item} key={el.id}>
                       <ArticlesItem
-                        id={el.id}
                         text={el.text}
                         src={el.src}
                         tag={el.tag}

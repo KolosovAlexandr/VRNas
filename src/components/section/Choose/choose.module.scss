@@ -10,6 +10,9 @@
     gap: 6.5rem;
     max-width: 75rem;
     margin: 0 auto;
+    &.reverse {
+      flex-direction: row-reverse;
+    }
   }
 
   &__column {
@@ -85,6 +88,9 @@
       flex-direction: column-reverse;
       align-items: stretch;
       gap: 3.125rem;
+      &.reverse {
+        flex-direction: column-reverse;
+      }
     }
     &__image {
       padding-bottom: 80%;

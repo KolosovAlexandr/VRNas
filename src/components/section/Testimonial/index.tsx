@@ -2,12 +2,13 @@
 import { useState } from "react";
 import { Title } from "@/components/elements/Title/Index";
 import { TestimonialItem } from "@/components/section/Testimonial/TestimonialItem";
-import { configTestimonial } from "@/constants/configurationTestimonial";
+import { dataTestimonial } from "@/constants/testimonial";
+import Image from "next/image";
 import image from "../../../../public/assets/images/man-4.png";
 import style from "./testimonial.module.scss";
 
 export const Testimonial = () => {
-  const [list, setList] = useState(configTestimonial);
+  const [list, setList] = useState(dataTestimonial);
   const toggleActiveClick = (id: string) => {
     setList(
       list.map((el) =>
@@ -28,10 +29,12 @@ export const Testimonial = () => {
           />
         </div>
         <div className={style.testimonial__body}>
-          <img
+          <Image
             className={style.testimonial__image}
             src={image.src}
             alt="image"
+            width={1250}
+            height={1250}
           />
           <div className={style.clients}>
             {list.map((el) => (

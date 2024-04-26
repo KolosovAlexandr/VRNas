@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import message from "../../../../public/assets/icons/Message.svg";
 import send from "../../../../public/assets/icons/Send.svg";
 import style from "./subscribe.module.scss";
@@ -28,10 +29,12 @@ export const Subscribe = () => {
           </div>
           <div className={style.subscribe__column}>
             <form className={style.form} onSubmit={onSubmit}>
-              <img
+              <Image
                 src={message.src}
                 alt="message"
                 className={style.form__image}
+                width={25}
+                height={49}
               />
               <input
                 className={style.form__input}
@@ -41,7 +44,7 @@ export const Subscribe = () => {
                 placeholder="Enter your email address"
               />
               <button className={style.form__btn} type="submit">
-                <img src={send.src} alt="send" />
+                <Image src={send.src} alt="send" width={17} height={17} />
               </button>
             </form>
           </div>

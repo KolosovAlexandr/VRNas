@@ -1,9 +1,9 @@
 import { MenuItems } from "../MenuItems";
-import { IConfigNavbar } from "@/types/IConfigNavbar";
+import { INavbar } from "@/types/INavbar";
 import style from "./menu.module.scss";
 
 type IMenu = {
-  data: IConfigNavbar[];
+  data: INavbar[];
   refNav: React.RefObject<HTMLSelectElement>;
   mobile: boolean;
 };

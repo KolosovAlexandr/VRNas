@@ -1,6 +1,6 @@
 import { Title } from "@/components/elements/Title/Index";
 import { ServiceCard } from "@/components/section/OurService/ServiceCard";
-import { configService } from "@/constants/configurationService";
+import { dataService } from "@/constants/service";
 import style from "./ourService.module.scss";
 
 export const OurService = () => {
@@ -28,7 +28,7 @@ export const OurService = () => {
           </div>
         </div>
         <div className={style.service__content}>
-          {configService.map((el) => (
+          {dataService.map((el) => (
             <ServiceCard
               key={el.id}
               src={el.src}

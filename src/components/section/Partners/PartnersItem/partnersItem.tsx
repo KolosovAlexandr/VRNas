@@ -1,7 +1,12 @@
-import { IConfigPartners } from "@/types/IConfigPartners";
+import Image from "next/image";
 import style from "./partnersItem.module.scss";
 
-export const PartnersItem = ({ src, alt, id }: IConfigPartners) => {
+type IPartnersItem = {
+  src: string;
+  alt: string;
+};
+
+export const PartnersItem = ({ src, alt }: IPartnersItem) => {
   return (
     <div className={`${style.partner}`}>
       <div className={style.partner__logo}>

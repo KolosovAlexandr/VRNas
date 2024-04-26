@@ -1,9 +1,9 @@
-import { IConfigNavbar } from "@/types/IConfigNavbar";
+import { INavbar } from "@/types/INavbar";
 import Link from "next/link";
 import style from "./subMenu.module.scss";
 
 type ISubMenu = {
-  data: IConfigNavbar[];
+  data: INavbar[];
   isOpen: boolean;
   onClick: (
     e: React.BaseSyntheticEvent<

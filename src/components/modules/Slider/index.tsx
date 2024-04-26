@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
-import { configSlider } from "@/constants/configurationSlider";
+import { dataSlider } from "@/constants/slider";
 import { LinkTransparent } from "@/components/elements/LinkTransparent";
 import arrowNext from "../../../../public/assets/icons/Arrow-next.svg";
+import Image from "next/image";
 import Link from "next/link";
 import style from "./slider.module.scss";
 
@@ -18,12 +19,21 @@ export const Slider = () => {
   const [mouseSwiped, setMouseSwiped] = useState(false);
   const widthPercent = 100;
 
+  const translateFullSlides = (newPosition: number) => {
+    let toTranslateX = -widthPercent * newPosition;
+    for (let i = 0; i < dataSlider.length; i++) {
+      let item = document.getElementById(`slide` + i);
+      (item as HTMLElement).style.transform =
+        `translateX(` + toTranslateX + `%)`;
+    }
+  };
+
   const prevSlideHandler = () => {
     let newPosition = sliderPosition;
     if (newPosition > 0) {
       newPosition = newPosition - 1;
     } else if (true) {
-      newPosition = configSlider.length - 1;
+      newPosition = dataSlider.length - 1;
     }
     translateFullSlides(newPosition);
     setSliderPosition(newPosition);
@@ -31,7 +41,7 @@ export const Slider = () => {
 
   const nextSlideHandler = () => {
     let newPosition = sliderPosition;
-    if (newPosition < configSlider.length - 1) {
+    if (newPosition < dataSlider.length - 1) {
       newPosition = newPosition + 1;
     } else if (true) {
       newPosition = 0;
@@ -109,19 +119,10 @@ export const Slider = () => {
   const translatePartialSlides = (toTranslate: number) => {
     let currentTranslation = -sliderPosition * widthPercent;
     let totalTranslation = currentTranslation + toTranslate;
-    for (let i = 0; i < configSlider.length; i++) {
+    for (let i = 0; i < dataSlider.length; i++) {
       let item = document.getElementById("slide" + i);
       (item as HTMLElement).style.transform =
         `translateX(` + totalTranslation + `%)`;
-    }
-  };
-
-  const translateFullSlides = (newPosition: number) => {
-    let toTranslateX = -widthPercent * newPosition;
-    for (let i = 0; i < configSlider.length; i++) {
-      let item = document.getElementById(`slide` + i);
-      (item as HTMLElement).style.transform =
-        `translateX(` + toTranslateX + `%)`;
     }
   };
 
@@ -148,9 +149,15 @@ export const Slider = () => {
           onMouseUp={(e) => mouseEndHandler(e)}
           onMouseLeave={mouseLeaveHandler}
         >
-          {configSlider.map((el, i) => (
+          {dataSlider.map((el, i) => (
             <div className={style.slide} key={el.id} id={"slide" + i}>
-              <img src={el.src} alt={el.alt} className={style.slide__image} />
+              <Image
+                src={el.src}
+                alt={el.alt}
+                className={style.slide__image}
+                width={619}
+                height={422}
+              />
               <div className={style.slide__content}>
                 <div className={style.slide__tag}>{el.tag}</div>
                 <div className={style.slide__row}>
@@ -169,7 +176,7 @@ export const Slider = () => {
         </div>
       </div>
       <div className={style.pagination}>
-        {configSlider.map((el, i) => (
+        {dataSlider.map((el, i) => (
           <span
             onClick={() => jumpToSlideHandler(i)}
             key={el.id}

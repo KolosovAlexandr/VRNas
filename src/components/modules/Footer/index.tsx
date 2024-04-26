@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { community, configFooter } from "@/constants/configurationFooter";
+import Image from "next/image";
+import { dataSocial, dataFooter } from "@/constants/footer";
 import logo from "../../../../public/assets/icons/Logo.svg";
 import style from "./footer.module.scss";
 
@@ -12,15 +13,20 @@ export const Footer = () => {
             <div className={style.footer__action}>
               <div className={style.footer__logo}>
                 <Link href="#">
-                  <img src={logo.src} alt="logo" />
+                  <Image src={logo.src} alt="logo" width={100} height={30} />
                 </Link>
               </div>
               <div className={style.social}>
                 <ul className={style.social__list}>
-                  {community.map((el) => (
+                  {dataSocial.map((el) => (
                     <li key={el.name} className={style.social__item}>
                       <Link href="#">
-                        <img src={el.src} alt={el.name} />
+                        <Image
+                          src={el.src}
+                          alt={el.name}
+                          width={16}
+                          height={16}
+                        />
                       </Link>
                     </li>
                   ))}
@@ -30,7 +36,7 @@ export const Footer = () => {
           </div>
           <div className={style.footer__column}>
             <div className={style.content}>
-              {configFooter.map((el) => (
+              {dataFooter.map((el) => (
                 <div className={style.content__column} key={el.column}>
                   <h2 className={style.content__title}>{el.column}</h2>
                   <ul className={style.content__list}>
@@ -38,7 +44,12 @@ export const Footer = () => {
                       <li className={style.content__item} key={itemChildren.id}>
                         {itemChildren.src ? (
                           <>
-                            <img src={itemChildren.src} alt="icon" />
+                            <Image
+                              src={itemChildren.src}
+                              alt="icon"
+                              width={16}
+                              height={16}
+                            />
                             <Link href={itemChildren.href}>
                               {itemChildren.title}
                             </Link>

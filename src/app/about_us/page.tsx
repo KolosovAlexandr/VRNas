@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import { TitlePage } from "@/components/section/TitlePage";
-import { about } from "@/constants/pages/about";
+import { About } from "@/components/section/About";
+import { Advantages } from "@/components/section/Advantages";
+import { Choose } from "@/components/section/Choose";
+import { Partners } from "@/components/section/Partners";
+import { OurTeam } from "@/components/section/OurTeam";
+import { FAQ } from "@/components/section/FAQ";
+import { Title } from "@/components/elements/Title/Index";
+import { dataChoose } from "@/constants/choose";
+import imageChoose from "../../../public/assets/images/man-7.png";
+import style from "./page.module.scss";
 
 export const metadata: Metadata = {
   title: "VRNas | About",
@@ -10,7 +19,31 @@ export const metadata: Metadata = {
 function AboutUs() {
   return (
     <>
-      <TitlePage title="About Us" list={about} />
+      <TitlePage link="Home" link2="About Us" href="/" />
+      <About />
+      <div className={`${style.title} ${style.choose}`}>
+        <Title
+          classNameH2=""
+          classNameH3={style.title__subtitle}
+          textH2="Why choose us"
+          textH3="Empowering Your Virtual Reality Experience"
+          marginBottom="2.5rem"
+        />
+      </div>
+      <Advantages />
+      <Choose data={dataChoose} src={imageChoose.src} reverse={true} />
+      <OurTeam />
+      <div className={style.title}>
+        <Title
+          classNameH2=""
+          classNameH3={style.title__subtitle}
+          textH2="Our trusted partners"
+          textH3="Discover the Companies We Work With"
+          marginBottom="2.5rem"
+        />
+      </div>
+      <Partners isTitle={false} />
+      <FAQ />
     </>
   );
 }

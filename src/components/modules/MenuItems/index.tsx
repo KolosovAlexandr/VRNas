@@ -1,18 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { IConfigNavbar } from "@/types/IConfigNavbar";
+import { INavbar } from "@/types/INavbar";
 import { SubMenu } from "../SubMenu";
 import { useState } from "react";
 import { useClickOutside } from "@/hooks/useClickOutSide";
 import style from "./menuItems.module.scss";
 
 type IMenuItems = {
-  item: IConfigNavbar;
+  item: INavbar;
   refNav: React.RefObject<HTMLSelectElement>;
   mobile: boolean;
 };
 
+// eslint-disable-next-line react/display-name
 export const MenuItems = ({ item, refNav, mobile }: IMenuItems) => {
   const [isOpen, setIsOpen] = useState(false);
 

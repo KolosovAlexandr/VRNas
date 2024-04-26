@@ -1,0 +1,145 @@
+@import "../../../styles/variables.scss";
+
+.team {
+  margin-bottom: 7.5rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.94rem;
+    max-width: 75rem;
+    gap: 2.5rem;
+    margin: 0 auto;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__btn {
+    text-transform: uppercase;
+    color: $white;
+    span {
+      font-weight: 600;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+.bottom {
+  display: block;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  &__btn_mobile {
+    display: none;
+    text-align: center;
+    & .btn {
+      color: $white;
+      text-transform: uppercase;
+      span {
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+      }
+    }
+    margin-top: 2rem;
+  }
+}
+
+.item {
+  flex: 0 1 25%;
+  position: relative;
+  &__image {
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 130%;
+    background: url("../../../../public/assets/vector/teamBg.svg") 0 0 / 100%
+      100% no-repeat;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../../../../public/assets/vector/teamBgActive.svg") 0 0 /
+        100% 100% no-repeat;
+      transition: all 0.3s ease 0s;
+      opacity: 0;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 95%;
+      object-fit: cover;
+    }
+  }
+  &__info {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__name {
+    font-size: 1rem;
+    color: $white;
+    white-space: nowrap;
+  }
+  &__job {
+    font-size: 0.8rem;
+    color: $grey;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1200px) {
+  .top {
+    &__subtitle {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .top {
+    &__btn {
+      display: none;
+    }
+  }
+  .bottom {
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__btn_mobile {
+      display: block;
+    }
+  }
+  .item {
+    flex: 0 1 50%;
+  }
+}
+
+@media (max-width: 479px) {
+  .item {
+    flex: 0 1 100%;
+  }
+}

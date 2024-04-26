@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     max-width: 75rem;
+    margin: 0 auto;
     gap: 3rem;
     padding: 0 0.94rem;
   }
@@ -36,41 +37,28 @@
     }
   }
   &__bottom {
-    position: block;
+    display: block;
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__link {
+    text-decoration: none;
+    color: $white;
+    font-size: 1rem;
+  }
+  &__image {
+    width: 0.5rem;
+    height: 0.5rem;
+    transform: rotate(-90deg);
   }
   &__underline {
     background: $bg-linear;
     height: 1px;
     width: 100%;
     margin-top: 2rem;
-  }
-}
-
-.list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  gap: 1rem;
-  &__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    a {
-      text-decoration: none;
-      color: $white;
-      font-size: 1rem;
-    }
-    &:last-child {
-      img {
-        display: none;
-      }
-    }
-  }
-  &__image {
-    width: 0.5rem;
-    height: 0.5rem;
-    transform: rotate(-90deg);
   }
 }

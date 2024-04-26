@@ -1,11 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { IConfigService } from "@/types/IConfigService";
 import { LinkTransparent } from "@/components/elements/LinkTransparent";
+import Image from "next/image";
 import style from "./serviceCard.module.scss";
 
-export const ServiceCard = ({ id, src, alt, title, text }: IConfigService) => {
+type IServiceCard = {
+  src: string;
+  alt: string;
+  title: string;
+  text: string;
+};
+
+export const ServiceCard = ({ src, alt, title, text }: IServiceCard) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={style.card}>
@@ -15,7 +22,7 @@ export const ServiceCard = ({ id, src, alt, title, text }: IConfigService) => {
       >
         <div className={style.card__top}>
           <div className={style.card__image}>
-            <img src={src} alt={alt} />
+            <Image src={src} alt={alt} width={48} height={48} />
           </div>
           <div className={style.card__title}>{title}</div>
           <button

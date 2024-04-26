@@ -1,13 +1,19 @@
 import Link from "next/link";
-import { IConfigLink } from "@/types/IConfigLink";
 import style from "./linkTransparent.module.scss";
+
+type ILinkTransparent = {
+  text?: string;
+  className: string;
+  href: string;
+  src?: string;
+};
 
 export const LinkTransparent = ({
   text,
   className,
-  href = "#",
+  href,
   src,
-}: IConfigLink) => {
+}: ILinkTransparent) => {
   return src ? (
     <Link href={href} className={`${style.linkTransparent} ${className}`}>
       <img className={style.linkTransparent__image} src={src} alt="icon" />

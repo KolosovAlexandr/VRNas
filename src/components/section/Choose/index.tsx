@@ -1,17 +1,18 @@
 import { Title } from "@/components/elements/Title/Index";
 import { ChooseItem } from "@/components/section/Choose/ChooseItem";
 import { Video } from "@/components/elements/Video";
-import { configChoose } from "@/constants/configurationChoose";
-import { configVideo } from "@/constants/configurationVideo";
-import image from "../../../../public/assets/images/man-3.png";
+import { dataVideo } from "@/constants/video";
+import { IChoose } from "@/types/IChoose";
+import Image from "next/image";
 import poster from "../../../../public/assets/images/poster-3.png";
-
 import style from "./choose.module.scss";
 
-export const Choose = () => {
+export const Choose = ({ data, reverse, src }: IChoose) => {
   return (
     <section className={style.choose}>
-      <div className={style.choose__container}>
+      <div
+        className={`${style.choose__container} ${reverse ? style.reverse : ""}`}
+      >
         <div className={style.choose__column}>
           <div className={style.choose__content}>
             <Title
@@ -22,7 +23,7 @@ export const Choose = () => {
               marginBottom="2rem"
             />
             <div className={style.choose__spoilers}>
-              {configChoose.map((el) => (
+              {data.map((el) => (
                 <ChooseItem
                   key={el.id}
                   text={el.text}
@@ -36,10 +37,10 @@ export const Choose = () => {
         <div className={style.choose__column}>
           <div className={style.choose__media}>
             <div className={style.choose__image}>
-              <img src={image.src} alt="image" />
+              <Image src={src} alt="image" width={535} height={629} />
             </div>
             <Video
-              video={configVideo[2].src}
+              video={dataVideo[2].src}
               className={style.choose__video}
               poster={poster.src}
             />

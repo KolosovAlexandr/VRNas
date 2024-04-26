@@ -1,7 +1,8 @@
 import { Title } from "@/components/elements/Title/Index";
 import { PricingItem } from "@/components/section/Pricing/PricingItem";
-import { configPricing } from "@/constants/configurationPricing";
+import { dataPricing } from "@/constants/pricing";
 import { LinkGradient } from "@/components/elements/LinkGradient";
+import Image from "next/image";
 import image from "../../../../public/assets/images/man-5.png";
 import style from "./pricing.module.scss";
 
@@ -26,13 +27,13 @@ export const Pricing = () => {
         <div className={style.pricing__content}>
           <div className={style.pricing__body}>
             <div className={style.pricing__column}>
-              {configPricing.map((el) => (
+              {dataPricing.map((el) => (
                 <PricingItem key={el.title} title={el.title} text={el.text} />
               ))}
             </div>
             <div className={style.pricing__column}>
               <div className={style.pricing__image}>
-                <img src={image.src} alt="" />
+                <Image src={image.src} alt="image" width={325} height={468} />
               </div>
             </div>
           </div>

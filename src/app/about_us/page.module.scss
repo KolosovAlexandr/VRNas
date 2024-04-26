@@ -1,0 +1,13 @@
+.title {
+  text-align: center;
+  margin: 0 auto;
+  &.choose {
+    max-width: 34.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .title__subtitle {
+    font-size: 2rem;
+  }
+}

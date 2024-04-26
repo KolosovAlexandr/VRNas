@@ -1,6 +1,6 @@
 import { Hero } from "@/components/section/Hero";
 import { Advantages } from "@/components/section/Advantages";
-import { About } from "@/components/section/About";
+import { AboutHome } from "@/components/section/AboutHome";
 import { OurService } from "@/components/section/OurService";
 import { Choose } from "@/components/section/Choose";
 import { Started } from "@/components/section/Started";
@@ -9,19 +9,21 @@ import { Pricing } from "@/components/section/Pricing";
 import { Partners } from "@/components/section/Partners";
 import { Articles } from "@/components/section/Articles";
 import { Subscribe } from "@/components/section/Subscribe";
+import { dataChoose } from "@/constants/choose";
+import imageChoose from "../../public/assets/images/man-3.png";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Advantages />
-      <About />
+      <AboutHome />
       <OurService />
-      <Choose />
+      <Choose data={dataChoose} reverse={false} src={imageChoose.src} />
       <Started />
       <Testimonial />
       <Pricing />
-      <Partners />
+      <Partners isTitle={true} />
       <Articles />
       <Subscribe />
     </>
