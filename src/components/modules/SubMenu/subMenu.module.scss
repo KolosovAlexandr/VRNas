@@ -29,6 +29,8 @@
   }
   &__link,
   &__link_mobile {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: $grey-light;
     font-size: 1rem;
@@ -42,6 +44,10 @@
     &_mobile {
       font-size: 1.25rem;
     }
+  }
+  &__link_mobile {
+    display: flex;
+    justify-content: space-between;
   }
 }
 

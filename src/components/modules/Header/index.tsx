@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo, useCallback } from "react";
 import { Logo } from "@/components/elements/Logo";
 import { Navbar } from "../Navbar";
 import { Burger } from "@/components/elements/Burger";
@@ -7,17 +7,17 @@ import { usePathname } from "next/navigation";
 import style from "./header.module.scss";
 
 // eslint-disable-next-line react/display-name
-export const Header = () => {
+export const Header = memo(() => {
   const [topScroll, setTopScroll] = useState(0);
   const [openBurger, setOpenBurger] = useState(false);
 
   const path = usePathname();
 
-  const toggleOpenBurger = () => {
+  const toggleOpenBurger = useCallback(() => {
     setOpenBurger(!openBurger);
     if (openBurger) document.body.classList.remove("lock");
     if (!openBurger) document.body.classList.add("lock");
-  };
+  }, [openBurger]);
 
   useEffect(() => {
     setOpenBurger(false);
@@ -60,4 +60,4 @@ export const Header = () => {
       </div>
     </header>
   );
-};
+});

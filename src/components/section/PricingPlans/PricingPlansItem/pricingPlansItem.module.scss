@@ -1,0 +1,63 @@
+@import "../../../../styles/variables.scss";
+
+.item {
+  padding: 2rem;
+  background: $black-light;
+  border: 1px solid transparent;
+  border-image: $border;
+  &:hover {
+    border-image: $bg-linear 1;
+  }
+  &__rate {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  &__price {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    span {
+      color: $grey;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+  }
+  &__text {
+    color: $grey-light;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  &__list {
+    list-style-type: none;
+  }
+  &__el {
+    background: url("../../../../../public/assets/icons/check-mark.svg") left
+      top / 16px 16px no-repeat;
+    padding-left: 1.75rem;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    &:last-child {
+      margin-bottom: 3rem;
+    }
+    line-height: 1.42;
+  }
+  &__btn {
+    text-align: center;
+  }
+}
+
+.btn {
+  padding: 1.125rem 2.375rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 479px) {
+  .item {
+    padding: 1.125rem;
+  }
+  .btn {
+    padding: 0.625rem 1.125rem;
+  }
+}

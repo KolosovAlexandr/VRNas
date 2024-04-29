@@ -1,4 +1,4 @@
-import { Title } from "@/components/elements/Title/Index";
+import { Title } from "@/components/elements/Title";
 import { ChooseItem } from "../Choose/ChooseItem";
 import { dataFAQ } from "@/constants/FAQ";
 import style from "./FAQ.module.scss";
@@ -24,11 +24,12 @@ export const FAQ = () => {
         <div className={style.asked__bottom}>
           <ul className={style.asked__list}>
             {dataFAQ.map((el) => (
-              <li key={el.id}>
+              <li key={el.id} className={style.asked__item}>
                 <ChooseItem
-                  className={style.asked__item}
+                  className={style.item}
                   title={el.question}
                   text={el.answer}
+                  FAQ={true}
                 />
               </li>
             ))}

@@ -6,7 +6,8 @@ import { Choose } from "@/components/section/Choose";
 import { Partners } from "@/components/section/Partners";
 import { OurTeam } from "@/components/section/OurTeam";
 import { FAQ } from "@/components/section/FAQ";
-import { Title } from "@/components/elements/Title/Index";
+import { Subscribe } from "@/components/section/Subscribe";
+import { Title } from "@/components/elements/Title";
 import { dataChoose } from "@/constants/choose";
 import imageChoose from "../../../public/assets/images/man-7.png";
 import style from "./page.module.scss";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   description: "",
 };
 
-function AboutUs() {
+export default function AboutUs() {
   return (
     <>
       <TitlePage link="Home" link2="About Us" href="/" />
@@ -44,8 +45,7 @@ function AboutUs() {
       </div>
       <Partners isTitle={false} />
       <FAQ />
+      <Subscribe />
     </>
   );
 }
-
-export default AboutUs;

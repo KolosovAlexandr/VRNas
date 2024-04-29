@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Title } from "@/components/elements/Title/Index";
+import { Title } from "@/components/elements/Title";
 import { TestimonialItem } from "@/components/section/Testimonial/TestimonialItem";
 import { dataTestimonial } from "@/constants/testimonial";
 import Image from "next/image";

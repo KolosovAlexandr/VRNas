@@ -7,45 +7,47 @@ import icon6 from "../../public/assets/icons/service-6.svg";
 
 export const dataService = [
   {
-    id: '1',
+    id: "1",
     src: icon1.src as string,
     alt: "icon",
     title: "VR Development",
     text: "From concept to creation, our team of VR developers will bring your vision to life.",
   },
   {
-    id: '2',
+    id: "2",
     src: icon2.src as string,
     alt: "icon",
     title: "VR Design",
     text: "Our talented VR designers will create immersive and engaging environments that will captivate your audience.",
   },
   {
-    id: '3',
+    id: "3",
     src: icon3.src as string,
     alt: "icon",
     title: "VR Consulting",
     text: "Our VR consultants will work with you to ensure that your VR experience meets your goals and exceeds your expectations.",
   },
   {
-    id: '4',
+    id: "4",
     src: icon4.src as string,
     alt: "icon",
     title: "VR Games",
     text: "We offer a wide selection of VR games that are suitable for players of all ages and skill levels.",
   },
   {
-    id: '5',
+    id: "5",
     src: icon5.src as string,
     alt: "icon",
     title: "VR Events",
     text: "Make your next event unforgettable with our VR event services.",
   },
   {
-    id: '6',
+    id: "6",
     src: icon6.src as string,
     alt: "icon",
     title: "VR Entertainment",
     text: "Reate a VR escape room, or offer VR experiences at a theme park, we have the expertise and experience to make it happen.",
   },
 ];
+
+

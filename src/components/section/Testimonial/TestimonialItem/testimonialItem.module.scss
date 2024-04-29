@@ -37,8 +37,8 @@
     width: 4.7rem;
     height: 4.7rem;
     border-radius: 50%;
-    background: url("../../../../../public/assets/vector/ClientBg.svg") 0 0 /
-      100% 100% no-repeat;
+    background: url("../../../../../public/assets/vector/ClientBg.svg") center /
+      contain no-repeat;
     &::before {
       content: "";
       position: absolute;
@@ -85,8 +85,8 @@
   }
 
   &__body {
-    background: url("../../../../../public/assets/vector/TextBg.svg") no-repeat
-      center center;
+    background: url("../../../../../public/assets/vector/TextBg.webp") no-repeat
+      0 0 / 100% 100%;
     font-size: 0.75rem;
     line-height: 1.66;
     color: $grey;
@@ -105,6 +105,7 @@
   }
   &__text {
     margin-bottom: 0.5rem;
+    white-space: wrap;
   }
   &__name {
     display: inline-block;
@@ -194,8 +195,21 @@
   }
 }
 
+@media (max-width: 430px) {
+  .client {
+    &__body {
+      padding: 0.94rem 0.625rem;
+      left: calc(100%);
+      width: 17.5rem;
+    }
+  }
+}
+
 @media (max-width: 370px) {
   .client {
+    &__body {
+      width: 15rem;
+    }
     &__btn {
       width: 3.125rem;
       height: 3.125rem;

@@ -50,9 +50,6 @@
 @media (max-width: 1200px) {
   .service {
     margin-bottom: clamp(5rem, 4.1rem + 4.55vw, 7.5rem);
-    &__subtitle {
-      font-size: 2rem;
-    }
     &__content {
       margin: 0 -0.47rem -0.94rem;
     }

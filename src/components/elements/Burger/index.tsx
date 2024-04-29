@@ -1,3 +1,4 @@
+import { memo } from "react";
 import style from "./burger.module.scss";
 
 type IBurger = {
@@ -5,7 +6,8 @@ type IBurger = {
   toggleOpenBurger: () => void;
 };
 
-export const Burger = ({ active, toggleOpenBurger }: IBurger) => {
+// eslint-disable-next-line react/display-name
+export const Burger = memo(({ active, toggleOpenBurger }: IBurger) => {
   return (
     <button
       className={`${style.burger} ${active ? style.active : ""}`}
@@ -18,4 +20,4 @@ export const Burger = ({ active, toggleOpenBurger }: IBurger) => {
       </div>
     </button>
   );
-};
+});

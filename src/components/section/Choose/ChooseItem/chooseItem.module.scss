@@ -10,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: start;
+    gap: 1rem;
     width: 100%;
     font-family: "ChakraPetch";
     font-weight: 500;
@@ -41,6 +42,30 @@
     &.active {
       padding-top: 0.75rem;
       height: 8rem;
+    }
+  }
+}
+
+.asked {
+  padding: 1rem;
+  background: $black-light;
+  border: 1px solid transparent;
+  border-image: $border;
+  &__button {
+    border-bottom: none;
+  }
+  &.active {
+    border-image: $bg-linear 1;
+    .asked__button {
+      border-bottom: 1px solid $grey;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .asked {
+    &__button {
+      font-size: 1rem;
     }
   }
 }

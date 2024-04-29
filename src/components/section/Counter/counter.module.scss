@@ -1,0 +1,49 @@
+@import "../../../styles/variables.scss";
+
+.counter {
+  margin-bottom: 7.5rem;
+  padding-top: 2rem;
+  &__container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 75rem;
+    padding: 0 0.94rem;
+  }
+  &__column {
+    flex: 0 1 33.333%;
+    text-align: center;
+    position: relative;
+    &:nth-child(2) {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 170%;
+        height: 18%;
+        background: $white;
+        filter: blur(65px);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .counter {
+    margin-bottom: clamp(5rem, 4.1rem + 4.55vw, 7.5rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .counter {
+    &__container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+    &__column {
+      flex: 0 1 100%;
+    }
+  }
+}

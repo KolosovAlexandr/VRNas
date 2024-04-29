@@ -1,4 +1,4 @@
-import { Title } from "@/components/elements/Title/Index";
+import { Title } from "@/components/elements/Title";
 import { PricingItem } from "@/components/section/Pricing/PricingItem";
 import { dataPricing } from "@/constants/pricing";
 import { LinkGradient } from "@/components/elements/LinkGradient";
@@ -6,11 +6,13 @@ import Image from "next/image";
 import image from "../../../../public/assets/images/man-5.png";
 import style from "./pricing.module.scss";
 
-export const Pricing = () => {
+export const Pricing = ({ titleCenter }: { titleCenter: boolean }) => {
   return (
     <section className={style.pricing}>
       <div className={style.pricing__container}>
-        <div className={style.pricing__top}>
+        <div
+          className={`${style.pricing__top} ${titleCenter ? style.center : ""}`}
+        >
           <Title
             classNameH2={style.pricing__title}
             classNameH3={style.pricing__subtitle}
@@ -18,7 +20,11 @@ export const Pricing = () => {
             textH3="Affordable VR Services for Everyone"
             marginBottom="1rem"
           />
-          <p className={style.pricing__text}>
+          <p
+            className={`${style.pricing__text} ${
+              titleCenter ? style.center : ""
+            }`}
+          >
             {`At VRNas, we believe that everyone should have access to the
             benefits of VR. That's why we offer a range of pricing options to
             meet the needs of any budget.`}

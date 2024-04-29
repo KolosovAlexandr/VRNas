@@ -3,6 +3,7 @@ export type IChooseItem = {
   title: string;
   text: string;
   className?: string;
+  FAQ?: boolean;
 };
 
 export type IChoose = {

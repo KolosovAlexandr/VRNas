@@ -1,4 +1,4 @@
-import { Title } from "@/components/elements/Title/Index";
+import { Title } from "@/components/elements/Title";
 import { ServiceCard } from "@/components/section/OurService/ServiceCard";
 import { dataService } from "@/constants/service";
 import style from "./ourService.module.scss";

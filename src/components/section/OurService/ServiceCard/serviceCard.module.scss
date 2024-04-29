@@ -32,6 +32,17 @@
       transition: 0.3s;
       opacity: 0;
     }
+    &:hover {
+      border-image: linear-gradient(to right, $blue, $purple) 1;
+      &::before {
+        opacity: 0.8;
+      }
+      .card__link {
+        transform: translateY(-50%);
+        transition: 0.3s;
+        opacity: 1;
+      }
+    }
   }
   &__top {
     display: block;
@@ -91,34 +102,21 @@
   }
 }
 
-@media (hover) {
+@media (pointer: coarse) {
   .card {
     &__body {
       &:hover {
-        border-image: linear-gradient(to right, $blue, $purple) 1;
-        &::before {
-          opacity: 0.8;
-        }
+        pointer-events: none;
         .card__link {
-          transform: translateY(-50%);
-          transition: 0.3s;
-          opacity: 1;
+          transform: translateY(0);
         }
       }
     }
-  }
-}
-
-@media (pointer: coarse) {
-  .card {
     &__link {
-      position: relative;
-      margin-top: 1.25rem;
-      right: 0;
+      position: static;
       opacity: 1;
-    }
-    &__image {
-      margin-bottom: 2.5rem;
+      margin-top: 1.25rem;
+      pointer-events: stroke;
     }
   }
 }

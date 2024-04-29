@@ -11,6 +11,7 @@ import { Articles } from "@/components/section/Articles";
 import { Subscribe } from "@/components/section/Subscribe";
 import { dataChoose } from "@/constants/choose";
 import imageChoose from "../../public/assets/images/man-3.png";
+import poster from "../../public/assets/images/poster-4.webp";
 
 export default function Home() {
   return (
@@ -20,9 +21,15 @@ export default function Home() {
       <AboutHome />
       <OurService />
       <Choose data={dataChoose} reverse={false} src={imageChoose.src} />
-      <Started />
+      <Started
+        tag="VR Service"
+        videoTitle="How to get started"
+        title="How to get started"
+        subtitle="Bringing Your Virtual Reality Dreams to Life"
+        poster={poster.src}
+      />
       <Testimonial />
-      <Pricing />
+      <Pricing titleCenter={false} />
       <Partners isTitle={true} />
       <Articles />
       <Subscribe />

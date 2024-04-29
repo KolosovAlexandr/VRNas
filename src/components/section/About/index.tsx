@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Title } from "@/components/elements/Title/Index";
+import { Title } from "@/components/elements/Title";
 import { Video } from "@/components/elements/Video";
 import { dataVideo } from "@/constants/video";
 import image from "../../../../public/assets/images/man-5.png";

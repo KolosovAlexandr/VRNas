@@ -1,4 +1,4 @@
-import { Title } from "@/components/elements/Title/Index";
+import { Title } from "@/components/elements/Title";
 import { LinkTransparent } from "@/components/elements/LinkTransparent";
 import { dataTeam } from "@/constants/team";
 import Image from "next/image";

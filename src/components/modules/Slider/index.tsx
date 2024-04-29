@@ -1,13 +1,35 @@
 "use client";
 import { useState } from "react";
-import { dataSlider } from "@/constants/slider";
-import { LinkTransparent } from "@/components/elements/LinkTransparent";
-import arrowNext from "../../../../public/assets/icons/Arrow-next.svg";
-import Image from "next/image";
-import Link from "next/link";
+
 import style from "./slider.module.scss";
 
-export const Slider = () => {
+type IDataHome = {
+  src: string;
+  alt: string;
+  tag: string;
+  text: string;
+  id: string;
+};
+
+type IDataService = {
+  id: string;
+  title: string;
+  subtitle: string;
+  paragraph_1: string;
+  paragraph_2: string;
+  paragraph_3: string;
+  paragraph_4: string;
+  list: string[];
+};
+
+type ISlider = {
+  data: IDataHome[] | IDataService[];
+  children: React.ReactNode;
+  pagination: boolean;
+  className?: string;
+};
+
+export const Slider = ({ data, children, pagination, className }: ISlider) => {
   const [sliderPosition, setSliderPosition] = useState(0);
   const [touchStartPosition, setTouchStartPosition] = useState(0);
   const [touchEndPosition, setTouchEndPosition] = useState(0);
@@ -21,7 +43,7 @@ export const Slider = () => {
 
   const translateFullSlides = (newPosition: number) => {
     let toTranslateX = -widthPercent * newPosition;
-    for (let i = 0; i < dataSlider.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       let item = document.getElementById(`slide` + i);
       (item as HTMLElement).style.transform =
         `translateX(` + toTranslateX + `%)`;
@@ -33,7 +55,7 @@ export const Slider = () => {
     if (newPosition > 0) {
       newPosition = newPosition - 1;
     } else if (true) {
-      newPosition = dataSlider.length - 1;
+      newPosition = data.length - 1;
     }
     translateFullSlides(newPosition);
     setSliderPosition(newPosition);
@@ -41,7 +63,7 @@ export const Slider = () => {
 
   const nextSlideHandler = () => {
     let newPosition = sliderPosition;
-    if (newPosition < dataSlider.length - 1) {
+    if (newPosition < data.length - 1) {
       newPosition = newPosition + 1;
     } else if (true) {
       newPosition = 0;
@@ -67,7 +89,7 @@ export const Slider = () => {
     }
   };
 
-  const touchEndHandler = (e: React.TouchEvent<HTMLDivElement>) => {
+  const touchEndHandler = () => {
     if (swiped) {
       if (touchStartPosition - touchEndPosition > 75) {
         nextSlideHandler();
@@ -97,7 +119,7 @@ export const Slider = () => {
       setMouseSwiped(true);
     }
   };
-  const mouseEndHandler = (e: React.MouseEvent<HTMLDivElement>) => {
+  const mouseEndHandler = () => {
     if (mouseSwiped === true) {
       if (mouseStartPosition - mouseEndPosition > 50) {
         nextSlideHandler();
@@ -119,7 +141,7 @@ export const Slider = () => {
   const translatePartialSlides = (toTranslate: number) => {
     let currentTranslation = -sliderPosition * widthPercent;
     let totalTranslation = currentTranslation + toTranslate;
-    for (let i = 0; i < dataSlider.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       let item = document.getElementById("slide" + i);
       (item as HTMLElement).style.transform =
         `translateX(` + totalTranslation + `%)`;
@@ -132,62 +154,37 @@ export const Slider = () => {
   };
 
   return (
-    <div className={style.slider}>
+    <div className={`${style.slider} ${className ? className : ""}`}>
       <div className={style.slider__swiper}>
         <div
           id="swiper"
-          className={
-            mouseClicked
-              ? `${style.slider__wrapper} ${style.active}`
-              : style.slider__wrapper
-          }
+          className={`${style.slider__wrapper} ${
+            mouseClicked ? style.active : ""
+          }`}
           onTouchStart={(e) => touchStartHandler(e)}
           onTouchMove={(e) => touchMoveHandler(e)}
-          onTouchEnd={(e) => touchEndHandler(e)}
+          onTouchEnd={touchEndHandler}
           onMouseDown={(e) => mouseStartHandler(e)}
           onMouseMove={(e) => mouseMoveHandler(e)}
-          onMouseUp={(e) => mouseEndHandler(e)}
+          onMouseUp={mouseEndHandler}
           onMouseLeave={mouseLeaveHandler}
         >
-          {dataSlider.map((el, i) => (
-            <div className={style.slide} key={el.id} id={"slide" + i}>
-              <Image
-                src={el.src}
-                alt={el.alt}
-                className={style.slide__image}
-                width={619}
-                height={422}
-              />
-              <div className={style.slide__content}>
-                <div className={style.slide__tag}>{el.tag}</div>
-                <div className={style.slide__row}>
-                  <Link href="#" className={style.slide__link}>
-                    {el.text}
-                  </Link>
-                  <LinkTransparent
-                    className={style.slide__btn}
-                    src={arrowNext.src}
-                    href="#"
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
+          {children}
         </div>
       </div>
-      <div className={style.pagination}>
-        {dataSlider.map((el, i) => (
-          <span
-            onClick={() => jumpToSlideHandler(i)}
-            key={el.id}
-            className={
-              sliderPosition === i
-                ? `${style.pagination__bullet} ${style.active}`
-                : style.pagination__bullet
-            }
-          ></span>
-        ))}
-      </div>
+      {pagination ? (
+        <div className={style.pagination}>
+          {data.map((el, i) => (
+            <span
+              onClick={() => jumpToSlideHandler(i)}
+              key={el.id}
+              className={`${style.pagination__bullet} ${
+                sliderPosition === i ? style.active : ""
+              }`}
+            ></span>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -1,10 +1,11 @@
 "use client";
-import { useRef } from "react";
+import { useRef, memo } from "react";
 import { Menu } from "../Menu";
 import { dataNavbar } from "@/constants/navbar";
 import style from "./navbar.module.scss";
 
-export const Navbar = ({ mobile = false }: { mobile?: boolean }) => {
+// eslint-disable-next-line react/display-name
+export const Navbar = memo(({ mobile = false }: { mobile?: boolean }) => {
   const refNav = useRef(null);
 
   return (
@@ -17,4 +18,4 @@ export const Navbar = ({ mobile = false }: { mobile?: boolean }) => {
       )}
     </nav>
   );
-};
+});

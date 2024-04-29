@@ -1,4 +1,4 @@
-import { Title } from "@/components/elements/Title/Index";
+import { Title } from "@/components/elements/Title";
 import { LinkGradient } from "@/components/elements/LinkGradient";
 import { Subscribe } from "@/components/section/Subscribe";
 import Image from "next/image";

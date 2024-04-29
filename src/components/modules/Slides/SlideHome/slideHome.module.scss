@@ -1,0 +1,87 @@
+@import "../../../../styles/variables.scss";
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 26.375rem;
+  width: 40.25rem;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.7s ease 0s;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__content {
+    position: relative;
+    padding: 1.5rem;
+  }
+  &__tag {
+    margin-bottom: 0.75rem;
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1.42;
+    padding: 0.125rem 0.625rem;
+    background: $scroll;
+    border-radius: 1rem;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.875rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  &__btn {
+    padding: 1.05rem 1.15rem;
+  }
+}
+
+@media (max-width: 1350px) {
+  .slide {
+    width: 619px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .slide {
+    width: calc(100vw * 0.475);
+  }
+}
+
+@media (max-width: 991px) {
+  .slide {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .slide {
+    &__link {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .slide {
+    min-height: 16.625rem;
+    &__link {
+      font-size: 1.25rem;
+    }
+  }
+}

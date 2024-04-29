@@ -18,3 +18,9 @@
   line-height: 1.2;
   font-size: 3rem;
 }
+
+@media (max-width: 1200px) {
+  .title_h3 {
+    font-size: 2rem;
+  }
+}

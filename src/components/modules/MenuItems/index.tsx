@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { INavbar } from "@/types/INavbar";
 import { SubMenu } from "../SubMenu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useClickOutside } from "@/hooks/useClickOutSide";
+import { usePathname } from "next/navigation";
 import style from "./menuItems.module.scss";
 
 type IMenuItems = {
@@ -19,6 +20,12 @@ export const MenuItems = ({ item, refNav, mobile }: IMenuItems) => {
 
   useClickOutside(refNav, () => setIsOpen(false));
 
+  const path = usePathname();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [path]);
+
   const toggleIsOpen = (
     e: React.BaseSyntheticEvent<
       MouseEvent,
@@ -27,6 +34,10 @@ export const MenuItems = ({ item, refNav, mobile }: IMenuItems) => {
     >
   ) => {
     e.preventDefault();
+    setIsOpen(!isOpen);
+  };
+
+  const toggleIsOpenButton = () => {
     setIsOpen(!isOpen);
   };
 
@@ -40,6 +51,7 @@ export const MenuItems = ({ item, refNav, mobile }: IMenuItems) => {
             onClick={toggleIsOpen}
             mobile={mobile}
             title={item.title}
+            onClickBtn={toggleIsOpenButton}
           />
         </>
       ) : (

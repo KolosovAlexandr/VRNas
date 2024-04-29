@@ -3,6 +3,7 @@
 .titlePage {
   margin-bottom: 7.5rem;
   margin-top: 5rem;
+  text-align: center;
   &__container {
     display: flex;
     flex-direction: column;
@@ -60,5 +61,13 @@
     height: 1px;
     width: 100%;
     margin-top: 2rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .titlePage {
+    &__title {
+      font-size: 3rem;
+    }
   }
 }

@@ -1,8 +1,10 @@
-import { Title } from "@/components/elements/Title/Index";
+import { Title } from "@/components/elements/Title";
 import { dataArticles } from "@/constants/articles";
 import { ArticlesItem } from "@/components/section/Articles/ArticlesItem";
 import { LinkTransparent } from "@/components/elements/LinkTransparent";
 import { Slider } from "@/components/modules/Slider";
+import { SlideHome } from "@/components/modules/Slides/SlideHome";
+import { dataSliderHome } from "@/constants/slider";
 import style from "./articles.module.scss";
 
 export const Articles = () => {
@@ -30,7 +32,11 @@ export const Articles = () => {
         <div className={style.articles__body}>
           <div className={style.articles__column}>
             <h4 className={style.articles__title}>Popular Article</h4>
-            <Slider />
+            <Slider data={dataSliderHome} pagination={true}>
+              {dataSliderHome.map((el, i) => (
+                <SlideHome props={el} i={i} key={el.id} />
+              ))}
+            </Slider>
           </div>
           <div className={style.articles__column}>
             <div className={style.articles__overflow}>

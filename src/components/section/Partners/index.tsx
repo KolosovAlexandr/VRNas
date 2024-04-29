@@ -1,4 +1,4 @@
-import { Title } from "@/components/elements/Title/Index";
+import { Title } from "@/components/elements/Title";
 import { PartnersItem } from "@/components/section/Partners/PartnersItem/partnersItem";
 import { dataPartners } from "@/constants/partners";
 import Image from "next/image";

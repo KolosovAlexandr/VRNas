@@ -14,19 +14,28 @@ type ISubMenu = {
   ) => void;
   mobile: boolean;
   title: string;
+  onClickBtn: () => void;
 };
 
-export const SubMenu = ({ data, isOpen, onClick, mobile, title }: ISubMenu) => {
+export const SubMenu = ({
+  data,
+  isOpen,
+  onClick,
+  mobile,
+  title,
+  onClickBtn,
+}: ISubMenu) => {
   return (
     <div className={style.menu__spoiler}>
       <Link
-        href="#"
+        href={title.toLowerCase()}
         className={`${mobile ? style.menu__link_mobile : style.menu__link}`}
-        onClick={onClick}
+        // onClick={onClick}
       >
         {title}
       </Link>
       <button
+        onClick={onClickBtn}
         className={`${mobile ? style.menu__btn_mobile : style.menu__btn} ${
           isOpen ? style.active : ""
         }`}

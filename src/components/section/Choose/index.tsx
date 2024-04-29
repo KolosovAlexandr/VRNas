@@ -1,4 +1,4 @@
-import { Title } from "@/components/elements/Title/Index";
+import { Title } from "@/components/elements/Title";
 import { ChooseItem } from "@/components/section/Choose/ChooseItem";
 import { Video } from "@/components/elements/Video";
 import { dataVideo } from "@/constants/video";

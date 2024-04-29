@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 50;
   &::before {
     content: "";
     position: absolute;
@@ -74,7 +74,7 @@
     border-image: $bg-linear 1;
     background: transparent;
     position: relative;
-    z-index: 2;
+    z-index: 50;
     transition: all 0.3s ease 0s;
     &:hover {
       color: $white;

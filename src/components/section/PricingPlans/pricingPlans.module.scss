@@ -1,0 +1,43 @@
+@import "../../../styles/variables.scss";
+
+.pricing {
+  margin-bottom: 7.5rem;
+  &__container {
+    padding: 0 0.94rem;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  &__top {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  &__text {
+    max-width: 46rem;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: $grey-light;
+    line-height: 1.75;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__column {
+    flex: 0 1 30%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .pricing {
+    margin-bottom: clamp(5rem, 4.1rem + 4.55vw, 7.5rem);
+    &__content {
+      justify-content: center;
+      gap: 2rem;
+    }
+    &__column {
+      flex: 0 1 33.333%;
+    }
+  }
+}
