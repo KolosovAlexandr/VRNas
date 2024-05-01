@@ -4,7 +4,7 @@ import { dataTeam } from "@/constants/team";
 import Image from "next/image";
 import style from "./ourTeam.module.scss";
 
-export const OurTeam = () => {
+export const OurTeamHome = () => {
   return (
     <section className={style.team}>
       <div className={style.team__container}>

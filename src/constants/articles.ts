@@ -10,6 +10,7 @@ export const dataArticles = [
     text: "How VR is Revolutionizing the Classroom",
     src: image1.src as string,
     alt: "image",
+    href: '/blog/1',
   },
   {
     id: "2",
@@ -17,6 +18,7 @@ export const dataArticles = [
     text: "Exploring New Worlds: The Benefits of VR Travel",
     src: image2.src as string,
     alt: "image",
+    href: '/blog/2',
   },
   {
     id: "3",
@@ -24,6 +26,7 @@ export const dataArticles = [
     text: "The Future of Education: How VR is Revolutionizing the Classroom",
     src: image3.src as string,
     alt: "image",
+    href: '/blog/3',
   },
   {
     id: "4",
@@ -31,6 +34,7 @@ export const dataArticles = [
     text: "Making Events Memorable: The Power of VR for Corporate and Special Occasions",
     src: image4.src as string,
     alt: "image",
+    href: '/blog/4',
   },
   {
     id: "5",
@@ -38,6 +42,7 @@ export const dataArticles = [
     text: "Exploring New Worlds: The Benefits of VR Travel",
     src: image2.src as string,
     alt: "image",
+    href: '/blog/5',
   },
   {
     id: "6",
@@ -45,6 +50,7 @@ export const dataArticles = [
     text: "The Future of Education: How VR is Revolutionizing the Classroom",
     src: image4.src as string,
     alt: "image",
+    href: '/blog/6',
   },
   {
     id: "7",
@@ -52,5 +58,6 @@ export const dataArticles = [
     text: "Making Events Memorable: The Power of VR for Corporate and Special Occasions",
     src: image3.src as string,
     alt: "image",
+    href: '/blog/7',
   },
 ];

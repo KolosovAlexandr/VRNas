@@ -10,27 +10,31 @@ export const dataSliderHome = [
     alt: "image",
     tag: "VR Games",
     text: "Entertainment Goes Virtual: The Rise of VR Gaming",
+    href: '/blog/1'
   },
   {
-    id: "2",
+    id: "10",
     src: slide2.src as string,
     alt: "image",
     tag: "VR Architecture",
     text: "The Future of Education: How VR is Revolutionizing the Classroom",
+    href: '/blog/10'
   },
   {
-    id: "3",
+    id: "11",
     src: slide3.src as string,
     alt: "image",
     tag: "VR Education",
     text: "Entertainment Goes Virtual: The Rise of VR Gaming",
+    href: '/blog/11'
   },
   {
-    id: "4",
+    id: "12",
     src: slide4.src as string,
     alt: "image",
     tag: "VR Entertainment",
     text: "Bringing Designs to Life: How VR is Changing Architecture",
+    href: '/blog/12'
   },
 ];
 

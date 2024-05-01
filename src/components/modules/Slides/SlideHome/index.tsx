@@ -11,12 +11,13 @@ export type ISlideHome = {
     tag: string;
     text: string;
     id: string;
+    href: string;
   };
   i: number;
 };
 
 export const SlideHome = ({ props, i }: ISlideHome) => {
-  const { id, src, alt, tag, text } = props;
+  const { id, src, alt, tag, text, href } = props;
   return (
     <div className={style.slide} key={id} id={"slide" + i}>
       <Image
@@ -35,7 +36,7 @@ export const SlideHome = ({ props, i }: ISlideHome) => {
           <LinkTransparent
             className={style.slide__btn}
             src={arrowNext.src}
-            href="#"
+            href={href}
           />
         </div>
       </div>

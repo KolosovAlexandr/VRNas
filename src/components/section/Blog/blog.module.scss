@@ -1,0 +1,73 @@
+@import "../../../styles/variables.scss";
+
+.blog {
+  margin-bottom: 7.5rem;
+  &__container {
+    padding: 0 0.94rem;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  &__content {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 30% 30% 30%;
+    gap: 2rem;
+  }
+}
+
+.article {
+  flex-direction: column;
+  align-items: flex-start;
+  background: $black-light;
+  border: 1px solid transparent;
+  border-image: $border 1;
+}
+
+.pagination {
+  margin-top: 2rem;
+  &__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  &__item {
+    background: $black-light;
+    border: 1px solid transparent;
+    border-image: $bg-linear 1;
+    padding: 0.7rem 0.9rem;
+    min-width: 38.5px;
+    cursor: pointer;
+    color: $grey;
+    transition: all 0.3s ease 0s;
+    &.active {
+      color: $white;
+    }
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .blog {
+    margin-bottom: clamp(5rem, 4.1rem + 4.55vw, 7.5rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .blog {
+    &__content {
+      grid-template-columns: 40% 40%;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .blog {
+    &__content {
+      justify-content: center;
+      grid-template-columns: 100%;
+    }
+  }
+}

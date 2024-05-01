@@ -4,7 +4,7 @@ import { Video } from "@/components/elements/Video";
 import { dataVideo } from "@/constants/video";
 import { IChoose } from "@/types/IChoose";
 import Image from "next/image";
-import poster from "../../../../public/assets/images/poster-3.png";
+import poster from "../../../../public/assets/images/article-1.webp";
 import style from "./choose.module.scss";
 
 export const Choose = ({ data, reverse, src }: IChoose) => {

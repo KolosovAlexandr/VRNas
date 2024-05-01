@@ -5,6 +5,7 @@ import { LinkTransparent } from "@/components/elements/LinkTransparent";
 import { Slider } from "@/components/modules/Slider";
 import { SlideHome } from "@/components/modules/Slides/SlideHome";
 import { dataSliderHome } from "@/constants/slider";
+import arrowNext from "../../../../public/assets/icons/Arrow-next.svg";
 import style from "./articles.module.scss";
 
 export const Articles = () => {
@@ -45,12 +46,13 @@ export const Articles = () => {
                 <ul className={style.articles__list}>
                   {dataArticles.map((el) => (
                     <li className={style.articles__item} key={el.id}>
-                      <ArticlesItem
-                        text={el.text}
-                        src={el.src}
-                        tag={el.tag}
-                        alt={el.alt}
-                      />
+                      <ArticlesItem props={el} blog={false}>
+                        <LinkTransparent
+                          className=""
+                          href={`/blog/${el.id}`}
+                          src={arrowNext.src}
+                        />
+                      </ArticlesItem>
                     </li>
                   ))}
                 </ul>
