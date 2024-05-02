@@ -31,7 +31,7 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/1',
+    href: '/resent_articles/1',
   },
   {
     id: "2",
@@ -50,7 +50,7 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/2',
+    href: '/resent_articles/2',
   },
   {
     id: "3",
@@ -69,7 +69,7 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/3',
+    href: '/resent_articles/3',
   },
   {
     id: "4",
@@ -88,7 +88,7 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/4',
+    href: '/resent_articles/4',
   },
   {
     id: "5",
@@ -107,7 +107,7 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/5',
+    href: '/resent_articles/5',
   },
   {
     id: "6",
@@ -126,7 +126,7 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/6',
+    href: '/resent_articles/6',
   },
   {
     id: "7",
@@ -145,7 +145,7 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/7',
+    href: '/resent_articles/7',
   },
   {
     id: "8",
@@ -164,7 +164,7 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/8',
+    href: '/resent_articles/8',
   },
   {
     id: "9",
@@ -183,7 +183,7 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/9',
+    href: '/resent_articles/9',
   },
   {
     id: "10",
@@ -202,7 +202,7 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/10',
+    href: '/resent_articles/10',
   },
   {
     id: "11",
@@ -221,7 +221,7 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/11',
+    href: '/resent_articles/11',
   },
   {
     id: "12",
@@ -240,6 +240,6 @@ export const dataBlog = [
     p6: 'The benefits of VR design in architecture are clear, and the technology is becoming increasingly accessible and affordable. More and more architects and firms are incorporating VR design into their workflows, and the industry is poised for a major transformation.',
     p7: 'In conclusion, VR design is changing the way architects design and bring their projects to life. It is a powerful tool that offers a range of benefits, from increased precision and efficiency in the design phase to better communication and understanding with clients. As the technology becomes more advanced and widespread, we can expect to see more innovative designs and better-designed buildings in the future.',
     postTags: '#VRDesign #ArchitectureInnovation #VirtualRealityArchitecture #BringingDesignsToLife #DesignVisualization #ArchitecturalVisualization #RevolutionizingArchitecture #BuildingInVR #DesignThinking #VRInArchitecture',
-    href: '/blog/12',
+    href: '/resent_articles/12',
   },
 ];

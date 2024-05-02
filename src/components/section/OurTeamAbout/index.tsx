@@ -1,10 +1,11 @@
 import { Title } from "@/components/elements/Title";
 import { LinkTransparent } from "@/components/elements/LinkTransparent";
+import { OurTeamItem } from "./OurTeamItem";
 import { dataTeam } from "@/constants/team";
 import Image from "next/image";
-import style from "./ourTeam.module.scss";
+import style from "./ourTeamAbout.module.scss";
 
-export const OurTeamHome = () => {
+export const OurTeamAbout = () => {
   return (
     <section className={style.team}>
       <div className={style.team__container}>
@@ -22,26 +23,28 @@ export const OurTeamHome = () => {
             <LinkTransparent
               className={style.top__btn}
               text="see all"
-              href="#"
+              href="/our_team"
             />
           </div>
         </div>
         <div className={style.bottom}>
           <ul className={style.bottom__list}>
-            {dataTeam.map((el) => (
-              <li key={el.id} className={style.item}>
-                <div className={style.item__image}>
-                  <Image src={el.src} alt={el.alt} width={295} height={390} />
-                </div>
-                <div className={style.item__info}>
-                  <p className={style.item__name}>{el.name}</p>
-                  <p className={style.item__job}>{el.job}</p>
-                </div>
-              </li>
+            {dataTeam.slice(0, 4).map((el) => (
+              <OurTeamItem
+                props={el}
+                className=""
+                key={el.id}
+                width={295}
+                height={390}
+              />
             ))}
           </ul>
           <div className={style.bottom__btn_mobile}>
-            <LinkTransparent text="see all" className={style.btn} href="#" />
+            <LinkTransparent
+              text="see all"
+              className={style.btn}
+              href="/our_team"
+            />
           </div>
         </div>
       </div>

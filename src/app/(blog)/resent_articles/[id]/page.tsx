@@ -1,12 +1,11 @@
-import { redirect } from "next/navigation";
 import { dataBlog } from "@/constants/blog";
 import { ArticlesItem } from "@/components/section/Articles/ArticlesItem";
 import Link from "next/link";
 import Image from "next/image";
-import arrowDown from "../../../../public/assets/icons/Arrow down.svg";
-import twitter from "../../../../public/assets/icons/logo-twitter.svg";
-import facebook from "../../../../public/assets/icons/logo-fb-simple.svg";
-import instagram from "../../../../public/assets/icons/logo-instagram.svg";
+import arrowDown from "../../../../../public/assets/icons/Arrow down.svg";
+import twitter from "../../../../../public/assets/icons/logo-twitter.svg";
+import facebook from "../../../../../public/assets/icons/logo-fb-simple.svg";
+import instagram from "../../../../../public/assets/icons/logo-instagram.svg";
 import style from "./page.module.scss";
 
 type IBlogArticle = {
@@ -24,9 +23,6 @@ export function generateMetadata({ params: { id } }: IBlogArticle) {
 }
 
 export default function BlogArticle({ params: { id } }: IBlogArticle) {
-  if (id === "blog") {
-    redirect("/blog");
-  }
   const item = dataBlog.filter((el) => {
     let temp = el.id === id;
     return temp;
@@ -52,7 +48,7 @@ export default function BlogArticle({ params: { id } }: IBlogArticle) {
       <div className={style.article__links}>
         <Link href="/">Home</Link>
         <Image src={arrowDown.src} alt="icon" width={8} height={8}></Image>
-        <Link href="/blog">Blog</Link>
+        <Link href="/resent_articles">Recent Articles</Link>
         <Image src={arrowDown.src} alt="icon" width={8} height={8}></Image>
         <span>{text}</span>
       </div>

@@ -4,7 +4,7 @@ import { About } from "@/components/section/About";
 import { Advantages } from "@/components/section/Advantages";
 import { Choose } from "@/components/section/Choose";
 import { Partners } from "@/components/section/Partners";
-import { OurTeamHome } from "@/components/section/OurTeamHome";
+import { OurTeamAbout } from "@/components/section/OurTeamAbout";
 import { FAQ } from "@/components/section/FAQ";
 import { Subscribe } from "@/components/section/Subscribe";
 import { Title } from "@/components/elements/Title";
@@ -33,7 +33,7 @@ export default function AboutUs() {
       </div>
       <Advantages />
       <Choose data={dataChoose} src={imageChoose.src} reverse={true} />
-      <OurTeamHome />
+      <OurTeamAbout />
       <div className={style.title}>
         <Title
           classNameH2=""

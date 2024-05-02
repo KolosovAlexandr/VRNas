@@ -1,8 +1,17 @@
 import Link from "next/link";
-import { IConfigLink } from "@/types/IConfigLink";
 import style from "./linkGradient.module.scss";
 
-export const LinkGradient = ({ text, className, href = "#" }: IConfigLink) => {
+type ILinkGradient = {
+  text: string;
+  className?: string;
+  href: string;
+};
+
+export const LinkGradient = ({
+  text,
+  className,
+  href = "#",
+}: ILinkGradient) => {
   return (
     <Link href={href} className={`${style.linkGradient} ${className}`}>
       {text}

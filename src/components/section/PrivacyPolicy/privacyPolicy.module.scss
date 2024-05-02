@@ -1,0 +1,88 @@
+@import "../../../styles/variables.scss";
+
+.policy {
+  margin-bottom: 7.5rem;
+  position: relative;
+  &__container {
+    max-width: 49.375rem;
+    padding: 0 0.94rem;
+    margin: 0 auto;
+  }
+  &__image_left {
+    max-height: 612px;
+    max-width: 232px;
+    z-index: -1;
+  }
+
+  &__image_right {
+    max-height: 612px;
+    max-width: 232px;
+    transform: rotateY(180deg);
+    margin-left: auto;
+    z-index: -1;
+  }
+
+  &__title {
+    text-align: center;
+  }
+  &__post {
+    font-size: 1rem;
+    color: $grey;
+    line-height: 1.75;
+    max-width: 38rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+  &__subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: $white;
+    margin-bottom: 1rem;
+  }
+  &__text,
+  &__item {
+    font-size: 1rem;
+    color: $grey;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  &__list {
+    padding-left: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  &__item {
+    margin: 0;
+  }
+  &__article {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .policy {
+    margin-bottom: clamp(5rem, 4.1rem + 4.55vw, 7.5rem);
+    &__image_left,
+    &__image_right {
+      max-height: calc(100vw * 0.4);
+      max-width: calc(100vw * 0.15);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .policy {
+    &__post {
+      max-width: 30rem;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .policy {
+    &__post {
+      max-width: 22rem;
+    }
+  }
+}

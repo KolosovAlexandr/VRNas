@@ -30,7 +30,7 @@ export const Partners = ({ isTitle }: { isTitle: boolean }) => {
             height={741}
           />
           {dataPartners.map((el) => (
-            <PartnersItem key={el.id} src={el.src} alt={el.alt} id={el.id} />
+            <PartnersItem key={el.id} src={el.src} alt={el.alt} />
           ))}
         </div>
       </div>

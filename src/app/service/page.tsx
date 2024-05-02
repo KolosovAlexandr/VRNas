@@ -17,7 +17,7 @@ function Service() {
       <TitlePage link="Home" link2="Our Service" href="/" />
       <OurService />
       <Counter />
-      <Pricing />
+      <Pricing titleCenter={false} />
       <Testimonial />
       <Subscribe />
     </>

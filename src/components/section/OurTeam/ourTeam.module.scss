@@ -1,0 +1,43 @@
+@import "../../../styles/variables.scss";
+
+.team {
+  margin-bottom: 7.5rem;
+  &__container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 0.94rem;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    list-style-type: none;
+    flex: 0 1 33.333%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .team {
+    margin-bottom: clamp(5rem, 4.1rem + 4.55vw, 7.5rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .team {
+    &__item {
+      flex: 0 1 50%;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .team {
+    &__item {
+      flex: 0 1 100%;
+    }
+  }
+}

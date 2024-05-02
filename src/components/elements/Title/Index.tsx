@@ -2,8 +2,8 @@ import { memo } from "react";
 import style from "./title.module.scss";
 
 type ITitle = {
-  classNameH2: string;
-  classNameH3: string;
+  classNameH2?: string;
+  classNameH3?: string;
   textH2: string;
   textH3: string;
   marginBottom: string;

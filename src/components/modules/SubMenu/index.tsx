@@ -30,7 +30,7 @@ export const SubMenu = ({
       <Link
         href={title.toLowerCase()}
         className={`${mobile ? style.menu__link_mobile : style.menu__link}`}
-        // onClick={onClick}
+        onClick={onClick}
       >
         {title}
       </Link>
