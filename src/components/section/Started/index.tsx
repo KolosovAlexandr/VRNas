@@ -43,7 +43,7 @@ export const Started = ({
           </div>
         </div>
         <div className={style.started__button}>
-          <LinkGradient text="get started" href="#" />
+          <LinkGradient text="get started" href="/pricing_plan" />
         </div>
       </div>
     </section>

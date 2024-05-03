@@ -1,4 +1,4 @@
-import { dataBlog } from "@/constants/blog";
+import { dataBlog } from "@/constants/articles";
 import { ArticlesItem } from "@/components/section/Articles/ArticlesItem";
 import Link from "next/link";
 import Image from "next/image";

@@ -1,19 +1,19 @@
 "use client";
 import { useEffect, useState } from "react";
 import { ArticlesItem } from "../Articles/ArticlesItem";
-import { dataBlog } from "@/constants/blog";
+import { dataArticles } from "@/constants/articles";
 import Link from "next/link";
 import style from "./blog.module.scss";
 
 export const Blog = () => {
   const [countElements] = useState(9);
   const [page, setPage] = useState(1);
-  const [data, setData] = useState(dataBlog.slice(0, countElements * page));
+  const [data, setData] = useState(dataArticles.slice(0, countElements * page));
   const [totalPages, setTotalPages] = useState([]);
 
   const pages = () => {
     let arr: number[] = [];
-    let total = Math.ceil(dataBlog.length / countElements);
+    let total = Math.ceil(dataArticles.length / countElements);
     for (let i = 1; i <= total; i++) {
       arr.push(i);
     }
@@ -26,7 +26,7 @@ export const Blog = () => {
   const changePage = (el: number) => {
     let range = el * countElements;
     setPage(el);
-    setData(dataBlog.slice(range - countElements, range));
+    setData(dataArticles.slice(range - countElements, range));
   };
 
   return (

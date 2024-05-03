@@ -3,6 +3,7 @@ import { useState, useEffect, memo, useCallback } from "react";
 import { Logo } from "@/components/elements/Logo";
 import { Navbar } from "../Navbar";
 import { Burger } from "@/components/elements/Burger";
+import { LinkTransparent } from "@/components/elements/LinkTransparent";
 import { usePathname } from "next/navigation";
 import style from "./header.module.scss";
 
@@ -45,9 +46,9 @@ export const Header = memo(() => {
           </div>
         </div>
         <div className={style.header__column}>
-          <button className={style.header__contact}>
-            <span>Contact us</span>
-          </button>
+          <div className={style.header__contact}>
+            <LinkTransparent text="Contact us" href="/contact_us" />
+          </div>
           <Burger active={openBurger} toggleOpenBurger={toggleOpenBurger} />
         </div>
       </div>

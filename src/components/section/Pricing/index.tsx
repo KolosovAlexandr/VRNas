@@ -47,11 +47,11 @@ export const Pricing = ({ titleCenter }: { titleCenter: boolean }) => {
             <div className={style.price__top}>Start from</div>
             <div className={style.price__value}>$99</div>
             <div className={style.price__btn}>
-              <LinkGradient text="get started" href="#" />
+              <LinkGradient text="get started" href="pricing_plan" />
             </div>
 
             <div className={style.price__description}>
-              30 Days Moneyback Guarantee
+              30 Days Money back Guarantee
             </div>
           </div>
         </div>

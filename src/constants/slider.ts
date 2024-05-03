@@ -10,7 +10,7 @@ export const dataSliderHome = [
     alt: "image",
     tag: "VR Games",
     text: "Entertainment Goes Virtual: The Rise of VR Gaming",
-    href: '/resent_articles/1'
+    href: '/recent_articles/1'
   },
   {
     id: "10",
@@ -18,7 +18,7 @@ export const dataSliderHome = [
     alt: "image",
     tag: "VR Architecture",
     text: "The Future of Education: How VR is Revolutionizing the Classroom",
-    href: '/resent_articles/10'
+    href: '/recent_articles/10'
   },
   {
     id: "11",
@@ -26,7 +26,7 @@ export const dataSliderHome = [
     alt: "image",
     tag: "VR Education",
     text: "Entertainment Goes Virtual: The Rise of VR Gaming",
-    href: '/resent_articles/11'
+    href: '/recent_articles/11'
   },
   {
     id: "12",
@@ -34,7 +34,7 @@ export const dataSliderHome = [
     alt: "image",
     tag: "VR Entertainment",
     text: "Bringing Designs to Life: How VR is Changing Architecture",
-    href: '/resent_articles/12'
+    href: '/recent_articles/12'
   },
 ];
 

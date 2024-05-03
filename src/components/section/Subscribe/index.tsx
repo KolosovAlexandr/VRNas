@@ -9,11 +9,6 @@ import style from "./subscribe.module.scss";
 export const Subscribe = () => {
   const [value, setValue] = useState("");
 
-  const onChangeInputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
-    setValue(e.target.value);
-  };
-
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
@@ -39,7 +34,7 @@ export const Subscribe = () => {
               <input
                 className={style.form__input}
                 value={value}
-                onChange={onChangeInputHandler}
+                onChange={(e) => setValue(e.target.value)}
                 type="text"
                 placeholder="Enter your email address"
               />

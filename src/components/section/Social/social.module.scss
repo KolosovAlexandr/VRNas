@@ -1,0 +1,45 @@
+@import "../../../styles/variables.scss";
+
+.social {
+  margin-bottom: 7.5rem;
+  &__container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 0.94rem;
+  }
+  &__content {
+    display: block;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    gap: 2rem;
+  }
+  &__item {
+    text-align: center;
+    flex: 0 1 33.333%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .social {
+    margin-bottom: clamp(5rem, 4.1rem + 4.55vw, 7.5rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .social {
+    &__list {
+      display: block;
+      max-width: 25rem;
+      margin: 0 auto;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

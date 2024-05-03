@@ -26,7 +26,7 @@ export const Articles = () => {
             <LinkTransparent
               text="see all"
               className={style.top__btn}
-              href="#"
+              href="/our_team"
             />
           </div>
         </div>
@@ -49,7 +49,7 @@ export const Articles = () => {
                       <ArticlesItem props={el} blog={false}>
                         <LinkTransparent
                           className=""
-                          href={`/blog/${el.id}`}
+                          href={`/recent_articles/${el.id}`}
                           src={arrowNext.src}
                         />
                       </ArticlesItem>
@@ -61,7 +61,11 @@ export const Articles = () => {
           </div>
         </div>
         <div className={style.articles__btn_mobile}>
-          <LinkTransparent text="see all" className={style.btn} href="#" />
+          <LinkTransparent
+            text="see all"
+            className={style.btn}
+            href="/our_team"
+          />
         </div>
       </div>
     </section>

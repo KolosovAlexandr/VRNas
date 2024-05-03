@@ -1,0 +1,127 @@
+@import "../../../styles/variables.scss";
+
+.contact {
+  margin-bottom: 7.5rem;
+  &__container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 0.94rem;
+  }
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    position: relative;
+  }
+  &__column {
+    flex: 0 1 50%;
+  }
+  &__image {
+    position: relative;
+    padding-bottom: 100%;
+    img {
+      object-fit: cover;
+      object-position: left;
+    }
+  }
+  &__text {
+    color: $grey;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  &__input {
+    background: $black-light;
+    border: 0;
+    border: 1px solid transparent;
+    border-image: $border;
+    width: 19.125rem;
+    height: 3.125rem;
+    padding: 1rem;
+    color: $white;
+  }
+  textarea {
+    resize: none;
+    height: 137px;
+    background: $black-light;
+    border: 0;
+    border: 1px solid transparent;
+    border-image: $border;
+    color: $white;
+    padding: 1rem;
+  }
+  &__btn {
+    display: inline-block;
+    position: relative;
+    border: none;
+    background-image: $bg-linear;
+    color: $white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: "ChakraPetch";
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    max-width: 11.9rem;
+    padding: 1rem 0rem;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: $bg-linear;
+      filter: blur(20px);
+      z-index: -1;
+      transition: all 0.5s ease 0s;
+      opacity: 0;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    margin-bottom: clamp(5rem, 4.1rem + 4.55vw, 7.5rem);
+  }
+}
+
+@media (max-width: 991px) {
+  .contact {
+    &__content {
+      display: block;
+      max-width: 41rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .form {
+    &__wrapper {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    &__input {
+      width: 100%;
+    }
+  }
+}

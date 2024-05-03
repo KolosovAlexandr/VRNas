@@ -34,11 +34,9 @@ export const ServiceCard = ({ src, alt, title, text }: IServiceCard) => {
         <div className={style.card__spoiler}>
           <div className={style.card__content}>
             <p className={style.card__text}>{text}</p>
-            <LinkTransparent
-              className={style.card__link}
-              href="/detail_service"
-              text="learn more"
-            />
+            <div className={style.card__link}>
+              <LinkTransparent href="/detail_service" text="learn more" />
+            </div>
           </div>
         </div>
       </div>

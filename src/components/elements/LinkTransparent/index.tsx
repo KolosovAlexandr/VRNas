@@ -3,7 +3,7 @@ import style from "./linkTransparent.module.scss";
 
 type ILinkTransparent = {
   text?: string;
-  className: string;
+  className?: string;
   href: string;
   src?: string;
 };

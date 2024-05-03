@@ -23,7 +23,7 @@ export const Hero = () => {
             <LinkGradient
               className={style.hero__btn}
               text="discover more"
-              href="#"
+              href="/pricing_plan"
             />
           </div>
           <div className={style.hero__action}>
