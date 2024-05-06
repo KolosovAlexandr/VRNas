@@ -1,4 +1,4 @@
-import { dataBlog } from "@/constants/articles";
+import { dataArticles } from "@/constants/articles";
 import { ArticlesItem } from "@/components/section/Articles/ArticlesItem";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,7 +15,7 @@ type IBlogArticle = {
 };
 
 export function generateMetadata({ params: { id } }: IBlogArticle) {
-  let temp = dataBlog.filter((el) => id === el.id);
+  let temp = dataArticles.filter((el) => id === el.id);
   const { text } = temp[0];
   return {
     title: text,
@@ -23,7 +23,7 @@ export function generateMetadata({ params: { id } }: IBlogArticle) {
 }
 
 export default function BlogArticle({ params: { id } }: IBlogArticle) {
-  const item = dataBlog.filter((el) => {
+  const item = dataArticles.filter((el) => {
     let temp = el.id === id;
     return temp;
   });
@@ -48,7 +48,7 @@ export default function BlogArticle({ params: { id } }: IBlogArticle) {
       <div className={style.article__links}>
         <Link href="/">Home</Link>
         <Image src={arrowDown.src} alt="icon" width={8} height={8}></Image>
-        <Link href="/resent_articles">Recent Articles</Link>
+        <Link href="/recent_articles">Recent Articles</Link>
         <Image src={arrowDown.src} alt="icon" width={8} height={8}></Image>
         <span>{text}</span>
       </div>
@@ -110,7 +110,7 @@ export default function BlogArticle({ params: { id } }: IBlogArticle) {
         <div className={style.article__column}>
           <p className={style.article__recentTitle}>Recent Article</p>
           <div className={style.article__recent}>
-            {dataBlog.slice(0, 4).map((el) => (
+            {dataArticles.slice(0, 4).map((el) => (
               <ArticlesItem
                 blog={false}
                 key={el.id}
