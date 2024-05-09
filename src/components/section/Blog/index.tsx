@@ -40,7 +40,7 @@ export const Blog = () => {
               className={style.article}
               blog={true}
             >
-              <Link href={`/resent_articles/${el.id}`}>read more</Link>
+              <Link href={`/recent_articles/${el.id}`}>read more</Link>
             </ArticlesItem>
           ))}
         </div>

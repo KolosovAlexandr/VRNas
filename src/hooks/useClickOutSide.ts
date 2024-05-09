@@ -6,7 +6,6 @@ export const useClickOutside = (
 ) => {
   useEffect(() => {
     const listener = (event: MouseEvent) => {
-      event.preventDefault();
       if (ref && ref.current && !ref.current.contains(event.target as Node)) {
         callback();
       }
